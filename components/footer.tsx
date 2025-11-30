@@ -39,7 +39,7 @@ export function Footer() {
               Quick Links
             </h4>
             <ul className="space-y-2">
-              {["About", "Services", "Projects", "Contact"].map(
+              {["About", "Services", "Blog", "Contact"].map(
                 (item, index) => (
                   <motion.li
                     key={item}
