@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Github, Twitter, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -17,9 +18,16 @@ export function Footer() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-lg font-semibold text-primary">
-              Dak-sky <span className="dark:text-white">.</span>
-            </h3>
+            <div className="flex items-center">
+             <Link href="/">
+              <Image
+                src="/logo.png"
+                alt="Dak-sky"
+                width={120}
+                height={40}
+                className="h-12 w-auto"
+              /></Link>
+            </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Reliable B2B logistics and freight forwarding services connecting
               China, Bangladesh, and Europe with seamless international shipping
