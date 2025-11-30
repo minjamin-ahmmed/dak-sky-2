@@ -10,9 +10,11 @@ import {
   ArrowRight,
   Linkedin,
   Twitter,
-  Github,
   Mail,
   MapPin,
+  CheckCircle,
+  Globe,
+  Handshake,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -21,194 +23,206 @@ import Image from "next/image";
 const teamMembers = [
   {
     id: 1,
-    name: "Sarah Chen",
-    role: "CEO & Co-Founder",
+    name: "Ahmed Rahman",
+    role: "Managing Director & CEO",
     department: "Leadership",
-    bio: "Visionary leader with 10+ years in tech startups. Previously led product at two unicorn companies and has a passion for building teams that ship exceptional products.",
-    image: "/placeholder.svg?height=400&width=400&text=Sarah+Chen",
+    bio: "Visionary leader with 15+ years in international logistics and freight forwarding. Expert in China-Bangladesh trade routes and European export markets. Founded Dak-sky to bridge global supply chains.",
+    image: "/user.png",
     skills: [
       "Strategic Planning",
-      "Product Vision",
+      "International Trade",
       "Team Leadership",
-      "Fundraising",
+      "Supply Chain Management",
     ],
-    location: "San Francisco, CA",
+    location: "Dhaka, Bangladesh",
     social: {
       linkedin: "#",
       twitter: "#",
-      email: "sarah@company.com",
+      email: "ahmed@dak-sky.com",
     },
     achievements: [
-      "Forbes 30 Under 30",
-      "TechCrunch Disruptor Award",
-      "Y Combinator Alum",
+      "Logistics Industry Leader",
+      "China-Bangladesh Trade Expert",
+      "15+ Years Experience",
     ],
   },
   {
     id: 2,
-    name: "Marcus Rodriguez",
-    role: "CTO & Co-Founder",
-    department: "Engineering",
-    bio: "Full-stack architect with expertise in scalable systems. Former senior engineer at Google with a track record of building products used by millions.",
-    image: "/placeholder.svg?height=400&width=400&text=Marcus+Rodriguez",
+    name: "Li Wei",
+    role: "Operations Manager - China",
+    department: "Operations",
+    bio: "Operations specialist with deep expertise in Chinese export logistics. Manages our Guangzhou operations center, ensuring seamless cargo handling and documentation for shipments to Bangladesh and Europe.",
+ image: "/user.png",
     skills: [
-      "System Architecture",
-      "Cloud Infrastructure",
-      "Team Management",
-      "DevOps",
+      "Cargo Operations",
+      "Documentation",
+      "Port Management",
+      "Quality Control",
     ],
-    location: "Austin, TX",
+    location: "Guangzhou, China",
     social: {
       linkedin: "#",
-      github: "#",
-      email: "marcus@company.com",
+      email: "liwei@dak-sky.com",
     },
     achievements: [
-      "Google Cloud Certified",
-      "AWS Solutions Architect",
-      "Open Source Contributor",
+      "Port Operations Certified",
+      "10+ Years China Operations",
+      "Zero Delay Record",
     ],
   },
   {
     id: 3,
-    name: "Emily Watson",
-    role: "Head of Design",
-    department: "Design",
-    bio: "Creative director with a passion for user-centered design. Previously at Apple and Airbnb, specializing in design systems and user research.",
-    image: "/placeholder.svg?height=400&width=400&text=Emily+Watson",
-    skills: ["UI/UX Design", "Design Systems", "User Research", "Prototyping"],
-    location: "New York, NY",
+    name: "Fatima Khan",
+    role: "Customs & Compliance Specialist",
+    department: "Customs",
+    bio: "Expert in customs clearance and regulatory compliance across Bangladesh, China, and Europe. Ensures all shipments meet international trade regulations and minimizes clearance delays.",
+   image: "/user.png",
+    skills: [
+      "Customs Clearance",
+      "Trade Compliance",
+      "Documentation",
+      "Regulatory Affairs",
+    ],
+    location: "Dhaka, Bangladesh",
     social: {
       linkedin: "#",
-      twitter: "#",
-      email: "emily@company.com",
+      email: "fatima@dak-sky.com",
     },
     achievements: [
-      "Webby Award Winner",
-      "Design Systems Expert",
-      "Adobe Creative Resident",
+      "Customs Broker Licensed",
+      "Compliance Expert",
+      "Fast-Track Clearance",
     ],
   },
   {
     id: 4,
-    name: "David Kim",
-    role: "Senior Full-Stack Developer",
-    department: "Engineering",
-    bio: "Passionate developer with expertise in modern web technologies. Loves solving complex problems and mentoring junior developers.",
-    image: "/placeholder.svg?height=400&width=400&text=David+Kim",
-    skills: ["React", "Node.js", "TypeScript", "PostgreSQL", "AWS"],
-    location: "Seattle, WA",
+    name: "Hassan Ali",
+    role: "Freight Coordinator",
+    department: "Operations",
+    bio: "Coordinates air and sea freight operations, managing complex logistics routes from origin to destination. Expert in route optimization and carrier relationships.",
+ image: "/user.png",
+    skills: [
+      "Freight Coordination",
+      "Route Planning",
+      "Carrier Management",
+      "Tracking & Monitoring",
+    ],
+    location: "Dhaka, Bangladesh",
     social: {
       linkedin: "#",
-      github: "#",
-      email: "david@company.com",
+      email: "hassan@dak-sky.com",
     },
     achievements: [
-      "React Contributor",
-      "Tech Conference Speaker",
-      "Hackathon Winner",
+      "On-Time Delivery 98%",
+      "Route Optimization Expert",
+      "8+ Years Experience",
     ],
   },
   {
     id: 5,
-    name: "Priya Patel",
-    role: "Product Manager",
-    department: "Product",
-    bio: "Data-driven product manager with a background in user psychology. Expert at translating user needs into product features that drive growth.",
-    image: "/placeholder.svg?height=400&width=400&text=Priya+Patel",
+    name: "Mei Lin",
+    role: "Sales Manager - Asia Pacific",
+    department: "Sales",
+    bio: "Drives business growth in the Asia-Pacific region, specializing in China-Bangladesh trade routes. Builds strong client relationships and develops customized logistics solutions.",
+ image: "/user.png",
     skills: [
-      "Product Strategy",
-      "Data Analysis",
-      "User Research",
-      "Agile Methodology",
+      "Business Development",
+      "Client Relations",
+      "Logistics Solutions",
+      "Market Analysis",
     ],
-    location: "Boston, MA",
+    location: "Guangzhou, China",
     social: {
       linkedin: "#",
-      twitter: "#",
-      email: "priya@company.com",
+      email: "meilin@dak-sky.com",
     },
     achievements: [
-      "Product Management Certified",
-      "Growth Hacking Expert",
-      "Analytics Specialist",
+      "Top Sales Performer",
+      "Client Retention 95%",
+      "Regional Growth Leader",
     ],
   },
   {
     id: 6,
-    name: "Alex Thompson",
-    role: "DevOps Engineer",
-    department: "Engineering",
-    bio: "Infrastructure specialist focused on reliability and scalability. Passionate about automation and building robust deployment pipelines.",
-    image: "/placeholder.svg?height=400&width=400&text=Alex+Thompson",
-    skills: ["Kubernetes", "Docker", "CI/CD", "Monitoring", "Security"],
-    location: "Denver, CO",
+    name: "Karim Hossain",
+    role: "Warehouse Manager",
+    department: "Warehousing",
+    bio: "Manages warehouse operations and inventory management in Bangladesh. Ensures secure storage, efficient distribution, and real-time inventory tracking for client shipments.",
+ image: "/user.png",
+    skills: [
+      "Warehouse Management",
+      "Inventory Control",
+      "Distribution",
+      "Quality Assurance",
+    ],
+    location: "Dhaka, Bangladesh",
     social: {
       linkedin: "#",
-      github: "#",
-      email: "alex@company.com",
+      email: "karim@dak-sky.com",
     },
     achievements: [
-      "Kubernetes Certified",
-      "Security Expert",
-      "Infrastructure Automation",
+      "Warehouse Operations Expert",
+      "Zero Loss Record",
+      "Efficiency Optimization",
     ],
   },
   {
     id: 7,
-    name: "Lisa Zhang",
-    role: "Senior UI/UX Designer",
-    department: "Design",
-    bio: "Creative problem solver with a keen eye for detail. Specializes in creating intuitive interfaces that users love to interact with.",
-    image: "/placeholder.svg?height=400&width=400&text=Lisa+Zhang",
+    name: "Sophie van der Berg",
+    role: "Customer Service Manager - Europe",
+    department: "Customer Service",
+    bio: "Leads customer service operations for European clients, ensuring exceptional support throughout the shipping process. Expert in handling international logistics inquiries and resolving issues promptly.",
+ image: "/user.png",
     skills: [
-      "Interface Design",
-      "User Testing",
-      "Figma",
-      "Animation",
-      "Accessibility",
+      "Customer Relations",
+      "Problem Solving",
+      "Communication",
+      "Client Support",
     ],
-    location: "Los Angeles, CA",
+    location: "Rotterdam, Netherlands",
     social: {
       linkedin: "#",
-      twitter: "#",
-      email: "lisa@company.com",
+      email: "sophie@dak-sky.com",
     },
     achievements: [
-      "Design Award Winner",
-      "Accessibility Advocate",
-      "Design Mentor",
+      "Customer Satisfaction 98%",
+      "Support Excellence Award",
+      "Multilingual Support",
     ],
   },
   {
     id: 8,
-    name: "James Wilson",
-    role: "Mobile Developer",
-    department: "Engineering",
-    bio: "Mobile-first developer with expertise in both native and cross-platform development. Passionate about creating smooth, performant mobile experiences.",
-    image: "/placeholder.svg?height=400&width=400&text=James+Wilson",
-    skills: ["React Native", "Swift", "Kotlin", "Flutter", "Mobile UX"],
-    location: "Miami, FL",
+    name: "Rajesh Kumar",
+    role: "Supply Chain Analyst",
+    department: "Operations",
+    bio: "Analyzes supply chain data to optimize logistics operations, reduce costs, and improve delivery times. Uses data-driven insights to enhance our freight forwarding services.",
+  image: "/user.png",
+    skills: [
+      "Data Analysis",
+      "Supply Chain Optimization",
+      "Cost Management",
+      "Performance Metrics",
+    ],
+    location: "Dhaka, Bangladesh",
     social: {
       linkedin: "#",
-      github: "#",
-      email: "james@company.com",
+      email: "rajesh@dak-sky.com",
     },
     achievements: [
-      "App Store Featured",
-      "Mobile Expert",
-      "Performance Optimization",
+      "Cost Reduction 15%",
+      "Analytics Expert",
+      "Process Optimization",
     ],
   },
 ];
 
-const departments = ["All", "Leadership", "Engineering", "Design", "Product"];
+const departments = ["All", "Leadership", "Operations", "Customs", "Sales", "Customer Service", "Warehousing"];
 
 const stats = [
-  { end: 15, suffix: "+", label: "Team Members" },
-  { end: 8, suffix: "", label: "Countries" },
-  { end: 50, suffix: "+", label: "Years Combined Experience" },
-  { end: 100, suffix: "%", label: "Remote-First" },
+  { end: 25, suffix: "+", label: "Team Members" },
+  { end: 3, suffix: "", label: "Global Offices" },
+  { end: 75, suffix: "+", label: "Years Combined Experience" },
+  { end: 98, suffix: "%", label: "On-Time Delivery" },
 ];
 
 export default function TeamPage() {
@@ -222,11 +236,11 @@ export default function TeamPage() {
         );
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen -mt-18">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(10,147,150,0.1),transparent_50%)] dark:bg-[radial-gradient(circle_at_80%_20%,rgba(10,147,150,0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(206,91,45,0.1),transparent_50%)] dark:bg-[radial-gradient(circle_at_80%_20%,rgba(206,91,45,0.1),transparent_50%)]" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -239,7 +253,7 @@ export default function TeamPage() {
                 variant="secondary"
                 className="mb-6 px-4 py-2 text-sm font-medium"
               >
-                Meet Our Team
+                MEET THE DAK-SKY TEAM
               </Badge>
             </motion.div>
 
@@ -250,10 +264,10 @@ export default function TeamPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               The{" "}
-              <span className="text-primary bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                Talented People
+              <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                Logistics Experts
               </span>{" "}
-              Behind Our Success
+              Behind Your Success
             </motion.h1>
 
             <motion.p
@@ -262,9 +276,9 @@ export default function TeamPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              We're a diverse team of passionate professionals from around the
-              world, united by our commitment to creating exceptional digital
-              experiences.
+              Our experienced team spans across Bangladesh, China, and Europe, 
+              working together to ensure seamless international shipping and 
+              reliable freight forwarding solutions for your business.
             </motion.p>
           </div>
         </div>
@@ -345,7 +359,7 @@ export default function TeamPage() {
                       alt={member.name}
                       width={400}
                       height={400}
-                      className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="w-full h-36 object-contain transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
@@ -371,18 +385,6 @@ export default function TeamPage() {
                           >
                             <Link href={member.social.twitter}>
                               <Twitter className="h-4 w-4" />
-                            </Link>
-                          </Button>
-                        )}
-                        {member.social.github && (
-                          <Button
-                            size="icon"
-                            variant="secondary"
-                            className="w-8 h-8"
-                            asChild
-                          >
-                            <Link href={member.social.github}>
-                              <Github className="h-4 w-4" />
                             </Link>
                           </Button>
                         )}
@@ -475,50 +477,60 @@ export default function TeamPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-balance mb-6">
-              Our Culture
+              Our Values
             </h2>
             <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto leading-relaxed">
-              We believe in creating an environment where everyone can do their
-              best work and grow professionally.
+              At Dak-sky, we're committed to excellence, reliability, and building 
+              strong partnerships that drive global trade success.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {[
               {
-                title: "Remote-First",
+                title: "Reliability First",
                 description:
-                  "Work from anywhere in the world with flexible hours and async communication.",
-                icon: "🌍",
+                  "We ensure on-time delivery and transparent communication throughout every shipment, building trust with our clients.",
+                icon: CheckCircle,
               },
               {
-                title: "Growth Mindset",
+                title: "Global Expertise",
                 description:
-                  "Continuous learning opportunities, mentorship programs, and conference attendance.",
-                icon: "📚",
+                  "Our team's deep knowledge of China-Bangladesh-Europe trade routes ensures efficient and cost-effective logistics solutions.",
+                icon: Globe,
               },
               {
-                title: "Work-Life Balance",
+                title: "Client Partnership",
                 description:
-                  "Unlimited PTO, mental health support, and respect for personal time.",
-                icon: "⚖️",
+                  "We work closely with clients to understand their needs and provide customized logistics solutions that drive their business growth.",
+                icon: Handshake,
               },
-            ].map((value, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="text-4xl mb-4">{value.icon}</div>
-                <h3 className="text-xl font-semibold mb-4">{value.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {value.description}
-                </p>
-              </motion.div>
-            ))}
+            ].map((value, index) => {
+              const IconComponent = value.icon;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="h-full glass glass-dark border-border/50 hover:border-primary/50 transition-all duration-300 group hover:shadow-lg">
+                    <CardContent className="p-8 text-center">
+                      <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                        <IconComponent className="h-8 w-8" />
+                      </div>
+                      <h3 className="text-xl font-semibold mb-3 text-foreground">
+                        {value.title}
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed text-sm">
+                        {value.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -534,11 +546,12 @@ export default function TeamPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-balance mb-6">
-              Join Our Team
+              Join Our Logistics Team
             </h2>
             <p className="text-xl text-muted-foreground text-pretty mb-8 leading-relaxed">
-              We're always looking for talented individuals who share our
-              passion for creating exceptional digital experiences.
+              We're always looking for experienced logistics professionals who share 
+              our commitment to excellence in international freight forwarding and 
+              supply chain management.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -547,7 +560,7 @@ export default function TeamPage() {
                 asChild
               >
                 <Link href="/contact">
-                  View Open Positions
+                  View Career Opportunities
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -557,7 +570,7 @@ export default function TeamPage() {
                 className="px-8 py-6 text-lg font-semibold bg-transparent"
                 asChild
               >
-                <Link href="/about">Learn More About Us</Link>
+                <Link href="/about">Learn More About Dak-sky</Link>
               </Button>
             </div>
           </motion.div>

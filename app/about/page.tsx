@@ -19,83 +19,83 @@ import Image from "next/image";
 const values = [
   {
     icon: Target,
-    title: "Excellence",
+    title: "Reliability",
     description:
-      "We strive for perfection in every project, delivering solutions that exceed expectations and drive real business results.",
+      "We deliver on our promises with consistent, dependable service. Your shipments arrive on time, every time, with complete transparency throughout the journey.",
   },
   {
     icon: Users,
-    title: "Collaboration",
+    title: "Partnership",
     description:
-      "We believe in the power of teamwork, working closely with our clients to understand their vision and bring it to life.",
+      "We build long-term relationships with our clients, understanding their unique logistics needs and providing tailored solutions that grow their business.",
   },
   {
     icon: Lightbulb,
     title: "Innovation",
     description:
-      "We stay ahead of the curve, embracing new technologies and methodologies to create cutting-edge solutions.",
+      "We leverage modern logistics technology and best practices to optimize routes, reduce costs, and streamline your supply chain operations.",
   },
   {
     icon: Award,
-    title: "Quality",
+    title: "Excellence",
     description:
-      "Quality is at the heart of everything we do, from initial concept to final delivery and ongoing support.",
+      "Quality service is at the core of everything we do. From customs clearance to final delivery, we ensure your cargo is handled with the utmost care.",
   },
 ];
 
 const timeline = [
   {
-    year: "2019",
+    year: "2012",
     title: "Company Founded",
     description:
-      "Started as a small team with a big vision to transform digital experiences.",
+      "Dak-sky was established with a vision to bridge logistics gaps between China, Bangladesh, and Europe, starting with air freight services.",
   },
   {
-    year: "2020",
-    title: "First Major Client",
+    year: "2014",
+    title: "Sea Freight Expansion",
     description:
-      "Landed our first enterprise client and delivered a game-changing e-commerce platform.",
+      "Expanded operations to include comprehensive sea freight services, establishing partnerships with major shipping lines and ports.",
   },
   {
-    year: "2021",
-    title: "Team Expansion",
+    year: "2017",
+    title: "Warehouse Facilities",
     description:
-      "Grew our team to 15+ talented developers, designers, and strategists.",
+      "Opened state-of-the-art warehousing facilities in Bangladesh to support our growing import and distribution services.",
+  },
+  {
+    year: "2019",
+    title: "European Network",
+    description:
+      "Established strong partnerships across Europe, enabling seamless export services from Bangladesh to major European markets.",
   },
   {
     year: "2022",
-    title: "International Reach",
+    title: "5,000+ Shipments",
     description:
-      "Expanded our services globally, working with clients across 3 continents.",
-  },
-  {
-    year: "2023",
-    title: "100+ Projects",
-    description:
-      "Celebrated completing over 100 successful projects and partnerships.",
+      "Milestone achievement of completing over 5,000 successful shipments with 99% on-time delivery rate and zero major incidents.",
   },
   {
     year: "2024",
-    title: "Innovation Lab",
+    title: "Digital Transformation",
     description:
-      "Launched our innovation lab focusing on AI and emerging technologies.",
+      "Launched advanced tracking systems and digital platforms to provide real-time visibility and streamlined logistics management.",
   },
 ];
 
 const achievements = [
-  { end: 150, suffix: "+", label: "Projects Delivered" },
-  { end: 50, suffix: "+", label: "Happy Clients" },
-  { end: 15, suffix: "+", label: "Team Members" },
-  { end: 99, suffix: "%", label: "Client Satisfaction" },
+  { end: 5000, suffix: "+", label: "Shipments Delivered" },
+  { end: 250, suffix: "+", label: "Satisfied Clients" },
+  { end: 12, suffix: "+", label: "Years Experience" },
+  { end: 99, suffix: "%", label: "On-Time Delivery" },
 ];
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen -mt-18">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(10,147,150,0.1),transparent_50%)] dark:bg-[radial-gradient(circle_at_30%_20%,rgba(10,147,150,0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(206,91,45,0.1),transparent_50%)] dark:bg-[radial-gradient(circle_at_30%_20%,rgba(206,91,45,0.1),transparent_50%)]" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -108,7 +108,7 @@ export default function AboutPage() {
                 variant="secondary"
                 className="mb-6 px-4 py-2 text-sm font-medium"
               >
-                About Our Company
+                About Dak-sky
               </Badge>
             </motion.div>
 
@@ -118,11 +118,11 @@ export default function AboutPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              We're Building the{" "}
+              Connecting{" "}
               <span className="text-primary bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                Future
+                Global Markets
               </span>{" "}
-              of Digital
+              Through Logistics Excellence
             </motion.h1>
 
             <motion.p
@@ -131,9 +131,9 @@ export default function AboutPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Founded in 2019, we're a passionate team of developers, designers,
-              and strategists dedicated to creating exceptional digital
-              experiences that drive business growth.
+              Since 2012, Dak-sky has been a trusted logistics partner, specializing in freight forwarding 
+              services connecting China, Bangladesh, and Europe. We combine extensive industry experience 
+              with innovative solutions to streamline your international shipping operations.
             </motion.p>
           </div>
         </div>
@@ -185,25 +185,21 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-6 text-muted-foreground leading-relaxed">
                 <p>
-                  What started as a small team with a shared passion for
-                  technology has grown into a full-service digital agency
-                  trusted by businesses worldwide. We believe that great
-                  software isn't just about code—it's about understanding
-                  people, solving real problems, and creating experiences that
-                  matter.
+                  Dak-sky was founded with a clear mission: to simplify international trade by providing 
+                  reliable, efficient logistics solutions. What started as a small freight forwarding 
+                  operation has evolved into a comprehensive logistics partner trusted by businesses 
+                  across China, Bangladesh, and Europe.
                 </p>
                 <p>
-                  Our journey began when we recognized the gap between what
-                  businesses needed and what traditional development agencies
-                  were delivering. We set out to change that by combining
-                  technical excellence with genuine partnership and transparent
-                  communication.
+                  Our journey began when we recognized the complexities businesses face when importing 
+                  from China or exporting to Europe. We saw the need for a logistics partner that 
+                  combines deep regional expertise with transparent communication and reliable execution.
                 </p>
                 <p>
-                  Today, we're proud to work with startups, scale-ups, and
-                  enterprises across various industries, helping them navigate
-                  the digital landscape and achieve their goals through
-                  innovative technology solutions.
+                  Today, we're proud to serve manufacturers, importers, exporters, and distributors 
+                  across various industries. Whether you're importing textiles from China, exporting 
+                  garments to Europe, or managing complex supply chains, we provide the logistics 
+                  expertise and personalized service your business needs to succeed in global markets.
                 </p>
               </div>
             </motion.div>
@@ -217,7 +213,7 @@ export default function AboutPage() {
             >
               <div className="glass glass-dark rounded-2xl p-8 border-border/50">
                 <Image
-                  src="/placeholder.svg?height=400&width=500&text=Team+Working+Together"
+                  src="/image-1.jpeg"
                   alt="Our team working together"
                   width={500}
                   height={400}
@@ -355,11 +351,11 @@ export default function AboutPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-balance mb-6">
-              Ready to Work Together?
+              Ready to Partner with Us?
             </h2>
             <p className="text-xl text-muted-foreground text-pretty mb-8 leading-relaxed">
-              Let's discuss how we can help bring your vision to life and drive
-              your business forward.
+              Let's discuss how we can streamline your logistics operations and expand 
+              your international trade capabilities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -368,7 +364,7 @@ export default function AboutPage() {
                 asChild
               >
                 <Link href="/contact">
-                  Start a Project
+                  Get a Free Quote
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -378,7 +374,7 @@ export default function AboutPage() {
                 className="px-8 py-6 text-lg font-semibold bg-transparent"
                 asChild
               >
-                <Link href="/team">Meet Our Team</Link>
+                <Link href="/services">View Our Services</Link>
               </Button>
             </div>
           </motion.div>

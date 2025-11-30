@@ -8,12 +8,14 @@ import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "../public/logo.png"
+import Image from "next/image";
 
 const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
-  { name: "Projects", href: "/projects" },
+  // { name: "Case Studies", href: "/projects" },
   { name: "Team", href: "/team" },
   { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
@@ -25,7 +27,12 @@ export function Navbar() {
 
   return (
     <motion.nav
-      className="sticky top-4 z-50 w-10/12 mx-auto rounded-full border-b border-border/40 glass glass-dark backdrop-blur supports-[backdrop-filter]:bg-background/60"
+      className={cn(
+        "sticky top-4 z-50 w-10/12 mx-auto border-b border-border/40 glass glass-dark backdrop-blur supports-[backdrop-filter]:bg-background/60 overflow-hidden transition-all duration-300",
+        isOpen 
+          ? "md:rounded-full rounded-2xl" 
+          : "rounded-full"
+      )}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
@@ -40,9 +47,9 @@ export function Navbar() {
           >
             <Link
               href="/"
-              className="text-2xl font-bold text-primary dark:text-white "
+           
             >
-              nexivo <span className="text-primary">.</span>
+              <Image src={logo} alt="Dak-sky Logo" width={100} height={100}  />
             </Link>
           </motion.div>
 
@@ -127,7 +134,7 @@ export function Navbar() {
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-border/40">
+              <div className="px-4 pt-2 pb-4 space-y-1 border-t border-border/40">
                 {navigation.map((item, index) => (
                   <motion.div
                     key={item.name}

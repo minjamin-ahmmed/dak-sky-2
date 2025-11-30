@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-export function NexivoLoader() {
+export function DakSkyLoader() {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
@@ -53,7 +53,7 @@ export function NexivoLoader() {
                 ease: "linear",
               }}
             >
-              n
+              D
             </motion.span>
             <motion.span
               className="inline-block ml-1"
@@ -67,7 +67,7 @@ export function NexivoLoader() {
                 delay: 0.1,
               }}
             >
-              e
+              a
             </motion.span>
             <motion.span
               className="inline-block ml-1"
@@ -81,7 +81,7 @@ export function NexivoLoader() {
                 delay: 0.2,
               }}
             >
-              x
+              k
             </motion.span>
             <motion.span
               className="inline-block ml-1"
@@ -95,7 +95,7 @@ export function NexivoLoader() {
                 delay: 0.3,
               }}
             >
-              i
+              -
             </motion.span>
             <motion.span
               className="inline-block ml-1"
@@ -109,7 +109,7 @@ export function NexivoLoader() {
                 delay: 0.4,
               }}
             >
-              v
+              s
             </motion.span>
             <motion.span
               className="inline-block ml-1"
@@ -123,7 +123,21 @@ export function NexivoLoader() {
                 delay: 0.5,
               }}
             >
-              o
+              k
+            </motion.span>
+            <motion.span
+              className="inline-block ml-1"
+              animate={{
+                rotateY: [0, 360],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "linear",
+                delay: 0.6,
+              }}
+            >
+              y
             </motion.span>
           </h1>
 

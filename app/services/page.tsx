@@ -5,160 +5,176 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
   ArrowRight,
-  Code,
-  Palette,
-  Smartphone,
-  Zap,
-  Search,
-  Shield,
+  Plane,
+  Ship,
+  Truck,
+  Warehouse,
+  Package,
   CheckCircle,
   Clock,
   Users,
   Target,
+  Globe,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
 const services = [
   {
-    icon: Code,
-    title: "Web Development",
+    icon: Plane,
+    title: "Air Freight",
     description:
-      "Custom web applications built with cutting-edge technologies for optimal performance and scalability.",
+      "Fast and reliable air freight services for urgent shipments. Perfect for time-sensitive cargo requiring quick transit times between China, Bangladesh, and Europe.",
     features: [
-      "React & Next.js Development",
-      "Full-Stack Solutions",
-      "API Development & Integration",
-      "Database Design & Optimization",
-      "Progressive Web Apps (PWA)",
-      "E-commerce Platforms",
+      "Express Delivery Options",
+      "Real-time Tracking & Updates",
+      "Customs Clearance Support",
+      "Optimal Routing Solutions",
+      "Flexible Scheduling",
+      "Competitive Air Freight Rates",
     ],
     technologies: [
-      "React",
-      "Next.js",
-      "Node.js",
-      "TypeScript",
-      "PostgreSQL",
-      "MongoDB",
+      "Major Airlines",
+      "Cargo Airlines",
+      "Express Carriers",
+      "Freight Forwarders Network",
     ],
-    startingPrice: "From $5,000",
+    startingPrice: "Contact for Quote",
   },
   {
-    icon: Palette,
-    title: "UI/UX Design",
+    icon: Ship,
+    title: "Sea Freight",
     description:
-      "Beautiful, intuitive designs that enhance user experience and drive engagement across all devices.",
+      "Cost-effective sea freight solutions for bulk shipments. Ideal for large volumes with flexible transit times. We handle both FCL and LCL shipments via major shipping routes.",
     features: [
-      "User Research & Analysis",
-      "Wireframing & Prototyping",
-      "Visual Design & Branding",
-      "Design System Creation",
-      "Usability Testing",
-      "Responsive Design",
+      "FCL & LCL Options",
+      "Port-to-Port Service",
+      "Consolidation Services",
+      "Full Container Load Management",
+      "Documentation & Compliance",
+      "Competitive Sea Freight Rates",
     ],
     technologies: [
-      "Figma",
-      "Adobe Creative Suite",
-      "Principle",
-      "InVision",
-      "Sketch",
+      "Major Shipping Lines",
+      "Container Services",
+      "Port Partnerships",
+      "Customs Documentation",
     ],
-    startingPrice: "From $3,000",
+    startingPrice: "Contact for Quote",
   },
   {
-    icon: Smartphone,
-    title: "Mobile Development",
+    icon: Truck,
+    title: "Door-to-Door Delivery",
     description:
-      "Native and cross-platform mobile applications that deliver exceptional performance and user experience.",
+      "Complete end-to-end logistics service from pickup to final delivery. We handle all transportation modes, documentation, and customs to ensure seamless door-to-door service.",
     features: [
-      "iOS & Android Development",
-      "React Native Solutions",
-      "App Store Optimization",
-      "Push Notifications",
-      "Offline Functionality",
-      "Performance Optimization",
+      "Complete Documentation Handling",
+      "Last Mile Delivery",
+      "Real-time Shipment Updates",
+      "Single Point of Contact",
+      "Customs Clearance Included",
+      "White Glove Service",
     ],
-    technologies: ["React Native", "Swift", "Kotlin", "Flutter", "Firebase"],
-    startingPrice: "From $8,000",
+    technologies: [
+      "Multi-modal Transport",
+      "Customs Brokerage",
+      "Tracking Systems",
+      "Local Delivery Network",
+    ],
+    startingPrice: "Contact for Quote",
   },
   {
-    icon: Search,
-    title: "SEO & Marketing",
+    icon: Warehouse,
+    title: "Warehousing Solutions",
     description:
-      "Comprehensive digital marketing strategies to increase your online visibility and drive qualified traffic.",
+      "Secure, modern storage facilities with comprehensive inventory management. Perfect for temporary storage, distribution hubs, or long-term warehousing needs.",
     features: [
-      "Technical SEO Audits",
-      "Content Strategy",
-      "Local SEO Optimization",
-      "Performance Marketing",
-      "Analytics & Reporting",
-      "Conversion Optimization",
+      "Secure Storage Facilities",
+      "Inventory Management Systems",
+      "Distribution Support",
+      "Climate-Controlled Options",
+      "24/7 Security Monitoring",
+      "Flexible Storage Terms",
     ],
-    technologies: ["Google Analytics", "Search Console", "SEMrush", "Ahrefs"],
-    startingPrice: "From $2,000",
+    technologies: [
+      "WMS Integration",
+      "Barcode Systems",
+      "Real-time Inventory Tracking",
+      "Distribution Networks",
+    ],
+    startingPrice: "Contact for Quote",
   },
   {
-    icon: Zap,
-    title: "Performance Optimization",
+    icon: Package,
+    title: "Product Sourcing & Supply Chain",
     description:
-      "Lightning-fast websites optimized for speed, Core Web Vitals, and exceptional user experience.",
+      "End-to-end product sourcing services from China, including supplier identification, quality control, and complete supply chain management to support your business operations.",
     features: [
-      "Core Web Vitals Optimization",
-      "Page Speed Improvements",
-      "Image & Asset Optimization",
-      "Caching Strategies",
-      "CDN Implementation",
-      "Performance Monitoring",
+      "Supplier Identification & Vetting",
+      "Quality Control & Inspection",
+      "Supply Chain Optimization",
+      "Negotiation Support",
+      "Production Monitoring",
+      "Complete Logistics Integration",
     ],
-    technologies: ["Lighthouse", "WebPageTest", "GTmetrix", "Cloudflare"],
-    startingPrice: "From $1,500",
+    technologies: [
+      "Supplier Networks",
+      "Quality Assurance Systems",
+      "Supply Chain Software",
+      "Production Management Tools",
+    ],
+    startingPrice: "Contact for Quote",
   },
   {
-    icon: Shield,
-    title: "Security & Maintenance",
+    icon: Warehouse,
+    title: "Customs Clearance",
     description:
-      "Comprehensive security solutions and ongoing maintenance to keep your applications safe and up-to-date.",
+      "We handle all customs clearance and documentation for your shipments. We are licensed to operate in Bangladesh and China. We are also certified to operate in Europe.",
     features: [
-      "Security Audits",
-      "SSL Implementation",
-      "Regular Updates",
-      "Backup Solutions",
-      "Monitoring & Alerts",
-      "24/7 Support",
+      "Customs Clearance",
+      "Documentation Handling",
+      "Customs Brokerage",
+      "HS Code Classification",
+      "Duty & Tax Calculation",
+      "Import/Export Compliance Advisory",
     ],
-    technologies: ["SSL/TLS", "Cloudflare", "AWS Security", "Monitoring Tools"],
-    startingPrice: "From $500/month",
-  },
+    technologies: [
+      "Customs Brokers",
+      "Customs Documentation",
+      "Customs Clearance Systems",
+    ],
+    startingPrice: "Contact for Quote",
+  }
 ];
 
 const process = [
   {
     step: "01",
-    title: "Discovery & Planning",
+    title: "Consultation & Planning",
     description:
-      "We start by understanding your business goals, target audience, and project requirements through detailed consultation.",
+      "We begin with a detailed consultation to understand your logistics needs, shipping routes, cargo specifications, and business requirements.",
     icon: Target,
   },
   {
     step: "02",
-    title: "Design & Prototyping",
+    title: "Quote & Documentation",
     description:
-      "Our design team creates wireframes, mockups, and interactive prototypes to visualize your solution.",
-    icon: Palette,
+      "Receive a comprehensive quote with transparent pricing. We handle all necessary documentation, permits, and customs requirements for your shipment.",
+    icon: Package,
   },
   {
     step: "03",
-    title: "Development & Testing",
+    title: "Transportation & Tracking",
     description:
-      "We build your solution using best practices, with rigorous testing throughout the development process.",
-    icon: Code,
+      "Your cargo is transported using optimal routes and methods. Real-time tracking ensures you're always informed about your shipment's status.",
+    icon: Globe,
   },
   {
     step: "04",
-    title: "Launch & Support",
+    title: "Delivery & Support",
     description:
-      "We deploy your project and provide ongoing support, maintenance, and optimization services.",
-    icon: Zap,
+      "Final delivery to your specified location with complete documentation. Ongoing support ensures any post-delivery needs are handled promptly.",
+    icon: CheckCircle,
   },
 ];
 
@@ -166,30 +182,30 @@ const benefits = [
   {
     title: "Expert Team",
     description:
-      "Work with experienced developers and designers who stay current with the latest technologies.",
+      "Work with experienced logistics professionals who understand international trade, customs regulations, and supply chain optimization.",
     icon: Users,
   },
   {
-    title: "Fast Delivery",
+    title: "On-Time Delivery",
     description:
-      "Efficient project management and agile development practices ensure timely delivery.",
+      "Proven track record of reliable, on-time deliveries. Our efficient operations and network partnerships ensure your cargo arrives as scheduled.",
     icon: Clock,
   },
   {
     title: "Quality Assurance",
     description:
-      "Rigorous testing and quality control processes guarantee reliable, bug-free solutions.",
+      "Comprehensive quality control and cargo protection measures ensure your shipments arrive in perfect condition with proper handling throughout.",
     icon: CheckCircle,
   },
 ];
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen -mt-18">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(10,147,150,0.1),transparent_50%)] dark:bg-[radial-gradient(circle_at_70%_30%,rgba(10,147,150,0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(206,91,45,0.1),transparent_50%)] dark:bg-[radial-gradient(circle_at_70%_30%,rgba(206,91,45,0.1),transparent_50%)]" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -214,7 +230,7 @@ export default function ServicesPage() {
             >
               Comprehensive{" "}
               <span className="text-primary bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                Digital Solutions
+                Logistics Services
               </span>{" "}
               for Your Business
             </motion.h1>
@@ -225,8 +241,8 @@ export default function ServicesPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              From web development to mobile apps, we offer end-to-end digital
-              services to help your business thrive in the digital age.
+              From air and sea freight to warehousing and product sourcing, we offer complete logistics 
+              solutions to streamline your international trade operations and expand your global reach.
             </motion.p>
           </div>
         </div>
@@ -283,7 +299,7 @@ export default function ServicesPage() {
 
                     <div className="mb-6">
                       <h4 className="text-sm font-semibold mb-3">
-                        Technologies:
+                        Capabilities:
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {service.technologies.map((tech, techIndex) => (
@@ -415,11 +431,11 @@ export default function ServicesPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-balance mb-6">
-              Ready to Get Started?
+              Ready to Ship with Confidence?
             </h2>
             <p className="text-xl text-muted-foreground text-pretty mb-8 leading-relaxed">
-              Let's discuss your project requirements and how we can help bring
-              your vision to life.
+              Let's discuss your logistics requirements and how we can help streamline 
+              your international shipping operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -428,7 +444,7 @@ export default function ServicesPage() {
                 asChild
               >
                 <Link href="/contact">
-                  Start Your Project
+                  Get a Free Quote
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -438,7 +454,7 @@ export default function ServicesPage() {
                 className="px-8 py-6 text-lg font-semibold bg-transparent"
                 asChild
               >
-                <Link href="/projects">View Our Portfolio</Link>
+                <Link href="/projects">View Case Studies</Link>
               </Button>
             </div>
           </motion.div>

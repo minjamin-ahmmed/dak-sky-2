@@ -6,7 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ScrollToTop } from "@/components/scroll-to-top";
-import { NexivoLoader } from "@/components/nexivo-loader";
+import { DakSkyLoader } from "@/components/nexivo-loader";
 import { Suspense } from "react";
 import "./globals.css";
 
@@ -17,37 +17,37 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "nexivo - Advanced Web Development",
+  title: "Dak-sky - B2B Logistics & Freight Forwarding Experts",
   description:
-    "Creating exceptional digital experiences with modern technology and innovative design.",
-  generator: "nexivo.app",
+    "Reliable international freight forwarding services. Import from China to Bangladesh, export to Europe. Air freight, sea freight, door-to-door delivery, warehousing, and product sourcing solutions.",
+  generator: "Dak-sky.com",
   keywords: [
-    "nexivo",
-    "nexivo team",
-    "nexivo projects",
-    "digital agency",
-    "web development",
-    "web development services",
-    "web development agency",
-    "design",
-    "design services",
-    "design agency",
-    "SaaS",
-    "SaaS services",
-    "SaaS agency",
-    "SaaS development",
-    "SaaS development services",
-    "SaaS development agency",
-    "SaaS development projects",
+    "Dak-sky",
+    "logistics",
+    "freight forwarding",
+    "air freight",
+    "sea freight",
+    "China to Bangladesh import",
+    "Bangladesh to Europe export",
+    "door to door delivery",
+    "warehousing solutions",
+    "product sourcing",
+    "supply chain management",
+    "international shipping",
+    "cargo services",
+    "freight services",
+    "logistics company Bangladesh",
+    "customs clearance",
+    "B2B logistics",
   ],
-  authors: [{ name: "nexivo Team" }],
+  authors: [{ name: "Dak-sky Team" }],
   icons: {
     icon: [{ url: "/favicon.ico", sizes: "any" }],
   },
   openGraph: {
-    title: "nexivo - Advanced Web Development",
+    title: "Dak-sky - B2B Logistics & Freight Forwarding Experts",
     description:
-      "Creating exceptional digital experiences with modern technology and innovative design.",
+      "Reliable international freight forwarding services. Import from China to Bangladesh, export to Europe. Air freight, sea freight, door-to-door delivery, warehousing, and product sourcing solutions.",
     type: "website",
   },
 };
@@ -60,7 +60,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="smooth-scroll" suppressHydrationWarning>
       <body className={`font-sans ${spaceGrotesk.variable} antialiased`}>
-        <NexivoLoader />
+        <DakSkyLoader />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

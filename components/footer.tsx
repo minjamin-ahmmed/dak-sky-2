@@ -18,11 +18,12 @@ export function Footer() {
             viewport={{ once: true }}
           >
             <h3 className="text-lg font-semibold text-primary">
-              nexivo <span className="dark:text-white">.</span>
+              Dak-sky <span className="dark:text-white">.</span>
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Creating exceptional digital experiences with modern technology
-              and innovative design.
+              Reliable B2B logistics and freight forwarding services connecting
+              China, Bangladesh, and Europe with seamless international shipping
+              solutions.
             </p>
           </motion.div>
 
@@ -70,10 +71,10 @@ export function Footer() {
             <h4 className="text-sm font-semibold text-foreground">Services</h4>
             <ul className="space-y-2">
               {[
-                "Web Development",
-                "UI/UX Design",
-                "Mobile Apps",
-                "Consulting",
+                "Air Freight",
+                "Sea Freight",
+                "Door-to-Door Delivery",
+                "Warehousing",
               ].map((service, index) => (
                 <motion.li
                   key={service}
@@ -135,7 +136,7 @@ export function Footer() {
           viewport={{ once: true }}
         >
           <p className="text-center text-sm text-muted-foreground">
-            © 2025 nexivo. All rights reserved.
+            © 2025 Dak-sky. All rights reserved.
           </p>
         </motion.div>
       </div>

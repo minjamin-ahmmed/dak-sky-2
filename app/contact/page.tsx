@@ -47,21 +47,21 @@ const contactSchema = z.object({
 type ContactFormData = z.infer<typeof contactSchema>;
 
 const services = [
-  "Web Development",
-  "Mobile Development",
-  "UI/UX Design",
-  "E-commerce",
-  "SaaS Development",
-  "Consulting",
+  "Air Freight",
+  "Sea Freight",
+  "Door-to-Door Delivery",
+  "Warehousing",
+  "Product Sourcing",
+  "Supply Chain Management",
   "Other",
 ];
 
 const budgetRanges = [
-  "Under $5,000",
-  "$5,000 - $15,000",
-  "$15,000 - $50,000",
-  "$50,000 - $100,000",
-  "$100,000+",
+  "Single Shipment",
+  "Regular Monthly Shipments",
+  "High Volume (100+ containers/year)",
+  "Long-term Partnership",
+  "Custom Solution",
 ];
 
 const contactMethods = [
@@ -69,32 +69,39 @@ const contactMethods = [
     icon: Mail,
     title: "Email Us",
     description: "Send us an email and we'll respond within 24 hours",
-    contact: "hello@portfolio.com",
-    action: "mailto:hello@portfolio.com",
+    contact: "info@dak-sky.com",
+    action: "mailto:info@dak-sky.com",
   },
   {
     icon: Phone,
     title: "Call Us",
-    description: "Speak directly with our team during business hours",
-    contact: "+1 (555) 123-4567",
-    action: "tel:+15551234567",
+    description: "Speak directly with our logistics team during business hours",
+    contact: "+880 123 456 7890",
+    action: "tel:+8801234567890",
   },
   {
     icon: MessageSquare,
-    title: "Live Chat",
-    description: "Chat with us in real-time for quick questions",
-    contact: "Available 9 AM - 6 PM PST",
-    action: "#",
+    title: "WhatsApp",
+    description: "Message us for quick quotes and shipment inquiries",
+    contact: "+880 123 456 7890",
+    action: "https://wa.me/8801234567890",
   },
 ];
 
 const offices = [
   {
-    city: "San Francisco",
-    address: "123 Tech Street, Suite 100",
-    zipcode: "San Francisco, CA 94105",
-    phone: "+1 (555) 123-4567",
-    email: "sf@portfolio.com",
+    city: "Dhaka, Bangladesh",
+    address: "Gulshan 2, Road 45",
+    zipcode: "Dhaka 1212, Bangladesh",
+    phone: "+880 123 456 7890",
+    email: "dhaka@dak-sky.com",
+  },
+  {
+    city: "Guangzhou, China",
+    address: "Tianhe District, Business Center",
+    zipcode: "Guangzhou, Guangdong, China",
+    phone: "+86 20 1234 5678",
+    email: "guangzhou@dak-sky.com",
   },
 ];
 
@@ -146,11 +153,11 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen -mt-18">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(10,147,150,0.1),transparent_50%)] dark:bg-[radial-gradient(circle_at_50%_50%,rgba(10,147,150,0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(206,91,45,0.1),transparent_50%)] dark:bg-[radial-gradient(circle_at_50%_50%,rgba(206,91,45,0.1),transparent_50%)]" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -173,11 +180,10 @@ export default function ContactPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Let's Build Something{" "}
+              Let's Discuss Your{" "}
               <span className="text-primary bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                Amazing
-              </span>{" "}
-              Together
+                Logistics Needs
+              </span>
             </motion.h1>
 
             <motion.p
@@ -186,8 +192,8 @@ export default function ContactPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Ready to start your project? We'd love to hear about your ideas
-              and discuss how we can help bring them to life.
+              Ready to streamline your international shipping? Get in touch with our team 
+              for a free consultation and customized logistics solution for your business.
             </motion.p>
           </div>
         </div>
@@ -241,7 +247,7 @@ export default function ContactPage() {
               <Card className="glass glass-dark border-border/50">
                 <CardContent className="p-8">
                   <h2 className="text-2xl font-bold mb-6">
-                    Start Your Project
+                    Request a Quote
                   </h2>
                   <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -321,12 +327,12 @@ export default function ContactPage() {
                         )}
                       </div>
                       <div>
-                        <Label htmlFor="budget">Budget Range *</Label>
+                        <Label htmlFor="budget">Shipping Frequency *</Label>
                         <Select
                           onValueChange={(value) => setValue("budget", value)}
                         >
                           <SelectTrigger className="mt-2">
-                            <SelectValue placeholder="Select budget range" />
+                            <SelectValue placeholder="Select shipping frequency" />
                           </SelectTrigger>
                           <SelectContent>
                             {budgetRanges.map((range) => (
@@ -345,12 +351,12 @@ export default function ContactPage() {
                     </div>
 
                     <div>
-                      <Label htmlFor="message">Project Details *</Label>
+                      <Label htmlFor="message">Shipment Details *</Label>
                       <Textarea
                         id="message"
                         {...register("message")}
                         className="mt-2 min-h-[120px]"
-                        placeholder="Tell us about your project, goals, timeline, and any specific requirements..."
+                        placeholder="Tell us about your shipment: origin, destination, cargo type, volume, timeline, and any special requirements..."
                       />
                       {errors.message && (
                         <p className="text-red-500 text-sm mt-1">
@@ -440,11 +446,11 @@ export default function ContactPage() {
                   <div className="space-y-2 text-muted-foreground">
                     <div className="flex items-center justify-between">
                       <span>Monday - Friday</span>
-                      <span>9:00 AM - 6:00 PM PST</span>
+                      <span>9:00 AM - 6:00 PM BST</span>
                     </div>
                     <div className="flex items-center justify-between">
                       <span>Saturday</span>
-                      <span>10:00 AM - 4:00 PM PST</span>
+                      <span>10:00 AM - 2:00 PM BST</span>
                     </div>
                     <div className="flex items-center justify-between">
                       <span>Sunday</span>
@@ -455,8 +461,8 @@ export default function ContactPage() {
                     <div className="flex items-center text-sm">
                       <Clock className="h-4 w-4 mr-2 text-primary" />
                       <span>
-                        We typically respond to inquiries within 2-4 hours
-                        during business hours.
+                        We typically respond to logistics inquiries within 2-4 hours
+                        during business hours. For urgent shipments, please call directly.
                       </span>
                     </div>
                   </div>

@@ -6,7 +6,6 @@ import { Badge } from "@/components/ui/badge";
 import {
   ArrowRight,
   ExternalLink,
-  Github,
   Calendar,
   Users,
   Award,
@@ -18,142 +17,142 @@ import { useState } from "react";
 
 const categories = [
   "All",
-  "Web Development",
-  "Mobile App",
-  "E-commerce",
-  "Dashboard",
-  "SaaS",
+  "Import",
+  "Export",
+  "Air Freight",
+  "Sea Freight",
+  "Sourcing",
 ];
 
-const projects = [
+const caseStudies = [
   {
     id: 1,
-    title: "E-commerce Platform Revolution",
+    title: "Large-Scale Textile Import from China",
     description:
-      "Complete redesign and development of a multi-vendor e-commerce platform with advanced analytics and AI-powered recommendations.",
+      "Managed complete logistics for importing 500 containers of textile materials from Guangzhou, China to Dhaka, Bangladesh within strict deadlines.",
     longDescription:
-      "Built a comprehensive e-commerce solution that handles over 10,000 daily transactions with real-time inventory management, advanced search capabilities, and personalized shopping experiences.",
+      "Successfully coordinated a massive textile import operation involving sea freight shipping, customs clearance, and final delivery to multiple distribution centers across Bangladesh. Implemented a comprehensive tracking system that provided real-time visibility throughout the supply chain, ensuring zero delays despite challenging port conditions.",
     image: "/modern-ecommerce-dashboard.png",
-    category: "E-commerce",
-    tags: ["Next.js", "Stripe", "PostgreSQL", "Redis", "AI/ML"],
-    client: "RetailTech Solutions",
-    duration: "6 months",
-    team: "8 members",
+    category: "Import",
+    tags: ["Sea Freight", "Textiles", "FCL Shipping", "Customs Clearance"],
+    client: "Bangladesh Textile Group",
+    duration: "3 months",
+    team: "12 logistics specialists",
     year: "2024",
     results: [
-      "300% increase in conversion rate",
-      "50% reduction in page load time",
-      "99.9% uptime achieved",
+      "500 containers delivered on time",
+      "100% customs clearance success rate",
+      "15% cost savings through route optimization",
     ],
     liveUrl: "#",
     githubUrl: "#",
   },
   {
     id: 2,
-    title: "SaaS Analytics Dashboard",
+    title: "Express Electronics Export to Europe",
     description:
-      "Real-time analytics dashboard with advanced data visualization, custom reporting, and team collaboration features.",
+      "Coordinated urgent air freight shipment of electronics from Bangladesh to multiple European destinations, achieving 48-hour delivery with full documentation.",
     longDescription:
-      "Developed a comprehensive analytics platform that processes millions of data points daily, providing actionable insights through interactive charts and customizable dashboards.",
+      "Handled time-critical electronics export using air freight services to Germany, France, and the UK. Managed complex export documentation, secured necessary permits, and coordinated with multiple airlines to ensure fastest possible transit times. Delivered perfect order fulfillment with complete traceability.",
     image: "/saas-analytics-dashboard-with-charts.jpg",
-    category: "Dashboard",
-    tags: ["React", "D3.js", "Node.js", "MongoDB", "WebSocket"],
-    client: "DataFlow Analytics",
-    duration: "4 months",
-    team: "6 members",
+    category: "Export",
+    tags: ["Air Freight", "Electronics", "Express Delivery", "Europe"],
+    client: "TechExports Bangladesh",
+    duration: "2 weeks",
+    team: "6 logistics coordinators",
     year: "2024",
     results: [
-      "40% faster data processing",
-      "Real-time collaboration for 1000+ users",
-      "Custom reporting saved 20 hours/week",
+      "48-hour delivery to European markets",
+      "Zero customs delays",
+      "99.8% on-time delivery rate",
     ],
     liveUrl: "#",
     githubUrl: "#",
   },
   {
     id: 3,
-    title: "Mobile Banking Revolution",
+    title: "Agricultural Products Supply Chain",
     description:
-      "Secure mobile banking application with biometric authentication, real-time transactions, and advanced security features.",
+      "End-to-end supply chain management for agricultural products from Chinese farms to Bangladesh, including sourcing, quality control, and door-to-door delivery.",
     longDescription:
-      "Created a next-generation mobile banking app with cutting-edge security, intuitive UX, and seamless integration with existing banking infrastructure.",
+      "Established a complete supply chain solution for agricultural imports from China. Services included supplier identification, quality inspection at origin, sea freight coordination, customs clearance, and final distribution. Implemented cold chain logistics to maintain product quality throughout the journey.",
     image: "/mobile-banking-app.png",
-    category: "Mobile App",
-    tags: ["React Native", "Biometrics", "Encryption", "API Gateway"],
-    client: "SecureBank Corp",
-    duration: "8 months",
-    team: "10 members",
+    category: "Sourcing",
+    tags: ["Product Sourcing", "Cold Chain", "Supply Chain", "Agriculture"],
+    client: "AgriTrade Bangladesh",
+    duration: "Ongoing",
+    team: "10 supply chain experts",
     year: "2023",
     results: [
-      "2M+ downloads in first year",
-      "99.99% transaction success rate",
-      "Bank-grade security certification",
+      "30% cost reduction through direct sourcing",
+      "Zero product spoilage incidents",
+      "Monthly shipment volume increased 200%",
     ],
     liveUrl: "#",
     githubUrl: "#",
   },
   {
     id: 4,
-    title: "Healthcare Management System",
+    title: "Garment Export to European Retailers",
     description:
-      "Comprehensive healthcare platform connecting patients, doctors, and administrators with telemedicine capabilities.",
+      "Managed regular shipments of ready-made garments from Bangladesh to major European retailers with strict quality and timing requirements.",
     longDescription:
-      "Built an integrated healthcare ecosystem that streamlines patient care, appointment scheduling, and medical record management with HIPAA compliance.",
-    image: "/placeholder.svg?height=400&width=600&text=Healthcare+Platform",
-    category: "Web Development",
-    tags: ["Next.js", "HIPAA", "WebRTC", "PostgreSQL", "AWS"],
-    client: "MedTech Innovations",
-    duration: "10 months",
-    team: "12 members",
+      "Coordinated monthly shipments of ready-made garments to multiple European retail chains. Handled consolidation, sea freight booking, port handling, and final mile delivery. Established a streamlined process that reduced transit times by 20% while maintaining 100% compliance with European import regulations.",
+    image: "/placeholder.svg?height=400&width=600&text=Garment+Export",
+    category: "Export",
+    tags: ["Sea Freight", "Garments", "Consolidation", "Retail"],
+    client: "European Fashion Retailers",
+    duration: "Ongoing",
+    team: "8 logistics specialists",
     year: "2023",
     results: [
-      "50,000+ patients served",
-      "30% reduction in wait times",
-      "HIPAA compliant infrastructure",
+      "50+ containers shipped monthly",
+      "20% reduction in transit times",
+      "100% compliance with EU regulations",
     ],
     liveUrl: "#",
     githubUrl: "#",
   },
   {
     id: 5,
-    title: "AI-Powered Learning Platform",
+    title: "Machinery Import & Installation Support",
     description:
-      "Intelligent learning management system with personalized curricula, progress tracking, and adaptive assessments.",
+      "Coordinated complex machinery import from China including oversized cargo handling, customs clearance, and on-site delivery coordination.",
     longDescription:
-      "Developed an AI-driven educational platform that personalizes learning experiences and provides detailed analytics for educators and students.",
-    image: "/placeholder.svg?height=400&width=600&text=Learning+Platform",
-    category: "SaaS",
-    tags: ["React", "Python", "TensorFlow", "GraphQL", "Docker"],
-    client: "EduTech Global",
-    duration: "7 months",
-    team: "9 members",
+      "Managed the import of heavy industrial machinery from Shanghai to Dhaka, requiring specialized handling equipment and careful route planning. Coordinated with port authorities for oversized cargo clearance, arranged secure transportation, and provided on-site delivery support including installation coordination.",
+    image: "/placeholder.svg?height=400&width=600&text=Machinery+Import",
+    category: "Import",
+    tags: ["Heavy Cargo", "Machinery", "Specialized Transport", "Installation"],
+    client: "Industrial Manufacturing Co.",
+    duration: "2 months",
+    team: "14 specialists",
     year: "2023",
     results: [
-      "85% improvement in learning outcomes",
-      "100,000+ active learners",
-      "AI accuracy rate of 94%",
+      "Zero damage during transport",
+      "Completed 2 weeks ahead of schedule",
+      "Full documentation and compliance",
     ],
     liveUrl: "#",
     githubUrl: "#",
   },
   {
     id: 6,
-    title: "Real Estate Marketplace",
+    title: "Pharmaceutical Cold Chain Logistics",
     description:
-      "Modern property marketplace with virtual tours, AI-powered matching, and integrated financing solutions.",
+      "Established reliable cold chain logistics network for temperature-sensitive pharmaceuticals from China to Bangladesh with strict compliance requirements.",
     longDescription:
-      "Created a comprehensive real estate platform that revolutionizes property discovery and transaction processes with cutting-edge technology.",
-    image: "/placeholder.svg?height=400&width=600&text=Real+Estate+Platform",
-    category: "Web Development",
-    tags: ["Next.js", "Three.js", "Stripe", "Maps API", "ML"],
-    client: "PropTech Ventures",
-    duration: "9 months",
-    team: "11 members",
+      "Developed a specialized cold chain solution for pharmaceutical imports requiring precise temperature control throughout transit. Implemented real-time temperature monitoring, secured necessary pharmaceutical import licenses, and established protocols meeting international standards. Ensured product integrity from factory to final destination.",
+    image: "/placeholder.svg?height=400&width=600&text=Pharma+Logistics",
+    category: "Import",
+    tags: ["Cold Chain", "Pharmaceuticals", "Compliance", "Temperature Control"],
+    client: "MedPharm Bangladesh",
+    duration: "Ongoing",
+    team: "12 specialized handlers",
     year: "2022",
     results: [
-      "$50M+ in transactions facilitated",
-      "60% faster property discovery",
-      "Virtual tours increased engagement by 200%",
+      "100% temperature compliance maintained",
+      "Zero product rejection cases",
+      "Full regulatory compliance achieved",
     ],
     liveUrl: "#",
     githubUrl: "#",
@@ -163,20 +162,20 @@ const projects = [
 export default function ProjectsPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedProject, setSelectedProject] = useState<
-    (typeof projects)[0] | null
+    (typeof caseStudies)[0] | null
   >(null);
 
   const filteredProjects =
     selectedCategory === "All"
-      ? projects
-      : projects.filter((project) => project.category === selectedCategory);
+      ? caseStudies
+      : caseStudies.filter((project) => project.category === selectedCategory);
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(10,147,150,0.1),transparent_50%)] dark:bg-[radial-gradient(circle_at_20%_80%,rgba(10,147,150,0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(206,91,45,0.1),transparent_50%)] dark:bg-[radial-gradient(circle_at_20%_80%,rgba(206,91,45,0.1),transparent_50%)]" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -189,7 +188,7 @@ export default function ProjectsPage() {
                 variant="secondary"
                 className="mb-6 px-4 py-2 text-sm font-medium"
               >
-                Our Portfolio
+                Success Stories
               </Badge>
             </motion.div>
 
@@ -199,9 +198,9 @@ export default function ProjectsPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Showcasing Our{" "}
+              Our Logistics{" "}
               <span className="text-primary bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                Best Work
+                Success Stories
               </span>
             </motion.h1>
 
@@ -211,9 +210,9 @@ export default function ProjectsPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Explore our portfolio of successful projects that have helped
-              businesses transform their digital presence and achieve remarkable
-              results.
+              Discover real examples of how we've helped businesses overcome logistics 
+              challenges and streamline their international shipping operations with 
+              reliable, efficient freight forwarding services.
             </motion.p>
           </div>
         </div>
@@ -335,7 +334,7 @@ export default function ProjectsPage() {
                       className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
                       onClick={() => setSelectedProject(project)}
                     >
-                      View Case Study
+                      View Full Case Study
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </CardContent>
@@ -436,15 +435,15 @@ export default function ProjectsPage() {
 
               <div className="flex gap-4">
                 <Button asChild>
-                  <Link href={selectedProject.liveUrl}>
-                    View Live Site
-                    <ExternalLink className="ml-2 h-4 w-4" />
+                  <Link href="/contact">
+                    Get a Quote
+                    <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
                 <Button variant="outline" asChild>
-                  <Link href={selectedProject.githubUrl}>
-                    View Code
-                    <Github className="ml-2 h-4 w-4" />
+                  <Link href="/contact">
+                    Request Similar Service
+                    <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
               </div>
@@ -464,11 +463,11 @@ export default function ProjectsPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-balance mb-6">
-              Ready to Start Your Project?
+              Ready to Streamline Your Logistics?
             </h2>
             <p className="text-xl text-muted-foreground text-pretty mb-8 leading-relaxed">
-              Let's work together to create something amazing that drives real
-              results for your business.
+              Let's discuss how we can help optimize your international shipping 
+              operations and deliver reliable logistics solutions for your business.
             </p>
             <Button
               size="lg"
@@ -476,7 +475,7 @@ export default function ProjectsPage() {
               asChild
             >
               <Link href="/contact">
-                Start Your Project
+                  Get a Free Quote
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>

@@ -12,162 +12,174 @@ import Image from "next/image";
 
 const categories = [
   "All",
-  "Web Development",
-  "Design",
-  "Technology",
-  "Business",
-  "Tutorials",
+  "Import/Export",
+  "Customs & Compliance",
+  "Freight Forwarding",
+  "Supply Chain",
+  "Industry Insights",
 ];
 
 const blogPosts = [
   {
     id: 1,
-    title: "The Future of Web Development: Trends to Watch in 2024",
+    title: "Complete Guide to Importing Goods from China to Bangladesh",
     excerpt:
-      "Explore the latest trends shaping web development, from AI integration to new frameworks and performance optimization techniques.",
-    content: `The web development landscape is evolving rapidly, with new technologies and methodologies emerging constantly. In 2024, we're seeing several key trends that are reshaping how we build and deploy web applications.
+      "Navigate the complexities of China-Bangladesh trade with our comprehensive guide covering documentation, customs procedures, and best practices for seamless imports.",
+    content: `Importing goods from China to Bangladesh has become increasingly important for businesses looking to source quality products at competitive prices. With the right knowledge and logistics partner, this process can be smooth and efficient.
 
-**AI Integration in Development**
-Artificial Intelligence is no longer just a buzzword—it's becoming an integral part of the development process. From AI-powered code completion to automated testing and deployment, developers are leveraging AI to increase productivity and reduce errors.
+**Understanding Trade Regulations**
+Both China and Bangladesh have specific regulations governing international trade. Understanding these requirements is crucial for avoiding delays and penalties. Key documents include commercial invoices, packing lists, certificates of origin, and import permits.
 
-**Performance-First Approach**
-With Core Web Vitals becoming increasingly important for SEO and user experience, developers are adopting a performance-first mindset. This includes optimizing for faster loading times, better interactivity, and visual stability.
+**Choosing the Right Shipping Method**
+Selecting between air freight and sea freight depends on your cargo type, urgency, and budget. Air freight is faster but more expensive, ideal for high-value or time-sensitive goods. Sea freight offers cost-effective solutions for bulk shipments.
 
-**The Rise of Edge Computing**
-Edge computing is bringing computation closer to users, reducing latency and improving performance. Frameworks like Next.js and platforms like Vercel are making it easier to deploy applications at the edge.
+**Customs Clearance Process**
+The customs clearance process in Bangladesh requires proper documentation and compliance with local regulations. Working with an experienced customs broker can significantly reduce clearance time and ensure compliance.
 
-**Sustainable Web Development**
-Environmental consciousness is driving developers to create more sustainable websites. This includes optimizing for energy efficiency, reducing data transfer, and choosing green hosting providers.`,
-    image: "/placeholder.svg?height=400&width=600&text=Web+Development+Trends",
-    category: "Web Development",
-    author: "Sarah Chen",
-    authorImage: "/placeholder.svg?height=100&width=100&text=Sarah",
+**Cost Optimization Strategies**
+Understanding all costs involved—including freight charges, customs duties, taxes, and handling fees—helps in accurate budgeting. Consider consolidating shipments and optimizing packaging to reduce costs.`,
+    image: "/blog-1.jpg",
+    category: "Import/Export",
+    author: "Ahmed Rahman",
+    authorImage: "/user.png",
     date: "2024-01-15",
-    readTime: "8 min read",
-    tags: ["Web Development", "AI", "Performance", "Trends"],
+    readTime: "12 min read",
+    tags: ["Import", "China", "Bangladesh", "Trade"],
     featured: true,
   },
   {
     id: 2,
-    title: "Building Accessible Web Applications: A Complete Guide",
+    title: "Navigating Customs Clearance: A Step-by-Step Guide",
     excerpt:
-      "Learn how to create inclusive web experiences that work for everyone, including users with disabilities and assistive technologies.",
-    content: `Web accessibility isn't just a legal requirement—it's a moral imperative and good business practice. Creating accessible web applications ensures that everyone can use your product, regardless of their abilities.
+      "Master the customs clearance process with our detailed guide covering documentation requirements, common pitfalls, and strategies for faster clearance.",
+    content: `Customs clearance is one of the most critical steps in international shipping. Delays here can cost time and money, making it essential to understand the process thoroughly.
 
-**Understanding WCAG Guidelines**
-The Web Content Accessibility Guidelines (WCAG) provide a comprehensive framework for creating accessible content. We'll explore the four main principles: Perceivable, Operable, Understandable, and Robust.
+**Essential Documentation**
+Proper documentation is the foundation of successful customs clearance. Required documents typically include commercial invoices, packing lists, bills of lading, certificates of origin, and any special permits or licenses.
 
-**Semantic HTML Foundation**
-Using proper HTML semantics is the foundation of accessibility. This includes using heading hierarchies, form labels, and ARIA attributes appropriately.
+**Understanding Duty and Tax Calculations**
+Customs duties and taxes vary based on product type, value, and origin country. Understanding how these are calculated helps in accurate cost estimation and compliance.
 
-**Testing for Accessibility**
-Regular testing with screen readers, keyboard navigation, and automated tools helps ensure your application remains accessible throughout development.`,
-    image: "/placeholder.svg?height=400&width=600&text=Web+Accessibility",
-    category: "Web Development",
-    author: "Marcus Rodriguez",
-    authorImage: "/placeholder.svg?height=100&width=100&text=Marcus",
+**Common Clearance Challenges**
+Delays often occur due to incomplete documentation, incorrect classification, or missing permits. Being proactive and working with experienced customs specialists can prevent these issues.
+
+**Best Practices for Faster Clearance**
+Preparing all documents in advance, ensuring accurate product descriptions, and maintaining good relationships with customs authorities can significantly speed up the clearance process.`,
+    image: "/blog-2.jpg",
+    category: "Customs & Compliance",
+    author: "Fatima Khan",
+    authorImage: "/user.png",
     date: "2024-01-10",
-    readTime: "12 min read",
-    tags: ["Accessibility", "WCAG", "Inclusive Design"],
+    readTime: "10 min read",
+    tags: ["Customs", "Compliance", "Documentation"],
     featured: false,
   },
   {
     id: 3,
-    title: "Design Systems That Scale: Lessons from Building Enterprise UIs",
+    title: "Exporting to Europe: Complete Logistics Strategy Guide",
     excerpt:
-      "Discover best practices for creating design systems that can grow with your organization and maintain consistency across products.",
-    content: `Design systems are the backbone of consistent, scalable user interfaces. After building design systems for multiple enterprise clients, we've learned valuable lessons about what works and what doesn't.
+      "Discover proven strategies for exporting goods from Bangladesh to European markets, covering regulations, shipping options, and market entry requirements.",
+    content: `Exporting to Europe offers significant opportunities for Bangladeshi businesses, but requires careful planning and understanding of European Union regulations and logistics requirements.
 
-**Component Architecture**
-A well-structured component library starts with atomic design principles. We'll explore how to build components that are flexible, reusable, and maintainable.
+**Understanding EU Import Regulations**
+The European Union has strict regulations governing imports, including product standards, labeling requirements, and safety certifications. Compliance is essential for market access.
 
-**Documentation and Adoption**
-The best design system is useless if teams don't adopt it. Learn strategies for creating comprehensive documentation and driving adoption across your organization.
+**Shipping Routes and Options**
+Multiple shipping routes connect Bangladesh to Europe, with Rotterdam, Hamburg, and Antwerp being major entry points. Choosing the right route depends on destination, cargo type, and cost considerations.
 
-**Versioning and Evolution**
-Design systems must evolve with your product. We'll discuss versioning strategies and how to manage breaking changes without disrupting development workflows.`,
-    image: "/placeholder.svg?height=400&width=600&text=Design+Systems",
-    category: "Design",
-    author: "Emily Watson",
-    authorImage: "/placeholder.svg?height=100&width=100&text=Emily",
+**Documentation and Certifications**
+European imports require specific documentation including EUR.1 certificates, phytosanitary certificates for certain goods, and CE marking for regulated products. Proper documentation ensures smooth entry.
+
+**Market Entry Strategies**
+Successful market entry requires understanding local preferences, distribution channels, and competitive landscape. Partnering with experienced logistics providers can facilitate market penetration.`,
+    image: "/blog-3.jpg",
+    category: "Import/Export",
+    author: "Sophie van der Berg",
+    authorImage: "/user.png",
     date: "2024-01-05",
-    readTime: "10 min read",
-    tags: ["Design Systems", "UI/UX", "Enterprise"],
+    readTime: "14 min read",
+    tags: ["Export", "Europe", "EU Regulations", "Shipping"],
     featured: true,
   },
   {
     id: 4,
-    title: "Optimizing React Applications for Production",
+    title: "Air Freight vs Sea Freight: Making the Right Choice",
     excerpt:
-      "Performance optimization techniques for React applications, from code splitting to bundle analysis and runtime optimizations.",
-    content: `React applications can become slow and bloated without proper optimization. Here are proven techniques to keep your React apps fast and efficient in production.
+      "Compare air and sea freight options to determine the best shipping method for your cargo based on cost, speed, and specific requirements.",
+    content: `Choosing between air freight and sea freight is a critical decision that impacts cost, delivery time, and overall supply chain efficiency. Understanding the trade-offs helps make informed decisions.
 
-**Code Splitting Strategies**
-Learn how to implement effective code splitting using React.lazy, dynamic imports, and route-based splitting to reduce initial bundle sizes.
+**When to Choose Air Freight**
+Air freight is ideal for time-sensitive shipments, high-value goods, perishable items, and smaller volumes. While more expensive, it offers speed and security advantages.
 
-**Bundle Analysis and Optimization**
-Use tools like webpack-bundle-analyzer to identify and eliminate unnecessary dependencies and optimize your build process.
+**When Sea Freight Makes Sense**
+Sea freight is cost-effective for large volumes, non-urgent shipments, and heavy or bulky cargo. Modern container shipping offers reliable service with competitive rates.
 
-**Runtime Performance**
-Optimize component rendering with React.memo, useMemo, and useCallback to prevent unnecessary re-renders and improve user experience.`,
-    image: "/placeholder.svg?height=400&width=600&text=React+Optimization",
-    category: "Technology",
-    author: "David Kim",
-    authorImage: "/placeholder.svg?height=100&width=100&text=David",
+**Cost Comparison Analysis**
+Understanding total landed costs—including freight charges, insurance, handling, and storage—provides accurate comparison. Sea freight typically offers 60-80% cost savings for bulk shipments.
+
+**Hybrid Solutions**
+Many businesses use a combination of both methods, using air freight for urgent orders and sea freight for regular replenishment, optimizing both cost and service levels.`,
+    image: "/blog-1.jpg",
+    category: "Freight Forwarding",
+    author: "Hassan Ali",
+    authorImage: "/user.png",
     date: "2023-12-28",
-    readTime: "15 min read",
-    tags: ["React", "Performance", "Optimization"],
+    readTime: "8 min read",
+    tags: ["Air Freight", "Sea Freight", "Shipping", "Logistics"],
     featured: false,
   },
   {
     id: 5,
-    title: "The Business Case for Modern Web Technologies",
+    title: "Optimizing Your Supply Chain: Best Practices for 2024",
     excerpt:
-      "How investing in modern web technologies can drive business growth, improve user experience, and reduce long-term costs.",
-    content: `Modern web technologies aren't just about staying current—they're strategic business investments that can drive growth and competitive advantage.
+      "Learn how to streamline your supply chain operations, reduce costs, and improve efficiency with proven strategies and modern logistics solutions.",
+    content: `Supply chain optimization is crucial for maintaining competitive advantage in today's global marketplace. Effective strategies can reduce costs, improve service levels, and enhance resilience.
 
-**ROI of Performance Improvements**
-Studies show that even small improvements in page load times can significantly impact conversion rates and revenue. We'll explore the business metrics that matter.
+**Visibility and Tracking**
+Real-time visibility into your supply chain enables proactive management and quick response to disruptions. Modern tracking systems provide end-to-end visibility from origin to destination.
 
-**Developer Productivity and Costs**
-Modern frameworks and tools can dramatically improve developer productivity, reducing time-to-market and long-term maintenance costs.
+**Inventory Management**
+Balancing inventory levels to meet demand while minimizing carrying costs requires sophisticated planning. Just-in-time strategies and safety stock optimization are key considerations.
 
-**Future-Proofing Your Investment**
-Learn how to evaluate and adopt new technologies in a way that protects your investment and ensures long-term success.`,
-    image: "/placeholder.svg?height=400&width=600&text=Business+Technology",
-    category: "Business",
-    author: "Priya Patel",
-    authorImage: "/placeholder.svg?height=100&width=100&text=Priya",
+**Supplier Relationships**
+Strong relationships with reliable suppliers and logistics partners are fundamental to supply chain success. Regular communication and performance monitoring ensure consistent service.
+
+**Technology Integration**
+Leveraging technology for automation, data analytics, and process optimization can significantly improve supply chain efficiency and decision-making capabilities.`,
+    image: "/blog-2.jpg",
+    category: "Supply Chain",
+    author: "Rajesh Kumar",
+    authorImage: "/user.png",
     date: "2023-12-20",
-    readTime: "7 min read",
-    tags: ["Business", "ROI", "Strategy"],
+    readTime: "11 min read",
+    tags: ["Supply Chain", "Optimization", "Efficiency", "Strategy"],
     featured: false,
   },
   {
     id: 6,
-    title: "Getting Started with Next.js 14: A Comprehensive Tutorial",
+    title: "Warehousing Solutions: Maximizing Efficiency and Reducing Costs",
     excerpt:
-      "Step-by-step guide to building your first Next.js application with the latest features including App Router and Server Components.",
-    content: `Next.js 14 introduces powerful new features that make building React applications faster and more efficient. This comprehensive tutorial will get you up and running.
+      "Explore modern warehousing strategies including inventory management, distribution optimization, and cost-effective storage solutions for your business.",
+    content: `Effective warehousing is essential for successful logistics operations. Modern warehousing solutions can significantly improve efficiency, reduce costs, and enhance customer service.
 
-**Setting Up Your Development Environment**
-We'll start with creating a new Next.js project and configuring your development environment for optimal productivity.
+**Warehouse Layout and Design**
+Optimal warehouse layout maximizes space utilization and operational efficiency. Considerations include storage systems, picking paths, and material handling equipment.
 
-**Understanding App Router**
-The new App Router provides a more intuitive way to handle routing, layouts, and data fetching. Learn how to leverage these features effectively.
+**Inventory Management Systems**
+Advanced inventory management systems provide real-time visibility, automated reordering, and accurate stock levels. Integration with logistics systems ensures seamless operations.
 
-**Server Components and Client Components**
-Understand when and how to use Server Components for better performance and Client Components for interactivity.
+**Distribution Strategies**
+Efficient distribution networks reduce delivery times and costs. Strategic warehouse locations, cross-docking, and consolidation services optimize distribution efficiency.
 
-**Deployment and Production Optimization**
-Finally, we'll cover deployment strategies and production optimizations to ensure your application performs well at scale.`,
-    image: "/placeholder.svg?height=400&width=600&text=Next.js+Tutorial",
-    category: "Tutorials",
-    author: "Alex Thompson",
-    authorImage: "/placeholder.svg?height=100&width=100&text=Alex",
+**Cost Optimization**
+Warehousing costs include space, labor, equipment, and technology. Optimizing these elements through automation, efficient processes, and strategic partnerships can significantly reduce total costs.`,
+    image: "/blog-3.jpg",
+    category: "Supply Chain",
+    author: "Karim Hossain",
+    authorImage: "/user.png",
     date: "2023-12-15",
-    readTime: "20 min read",
-    tags: ["Next.js", "Tutorial", "React", "App Router"],
+    readTime: "9 min read",
+    tags: ["Warehousing", "Inventory", "Distribution", "Storage"],
     featured: true,
   },
 ];
@@ -305,7 +317,7 @@ export default function BlogPage() {
                   </div>
                   <Button asChild>
                     <Link href="/contact">
-                      Work With Us
+                      Get a Quote
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
@@ -319,11 +331,11 @@ export default function BlogPage() {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen -mt-18">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(10,147,150,0.1),transparent_50%)] dark:bg-[radial-gradient(circle_at_30%_70%,rgba(10,147,150,0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(206,91,45,0.1),transparent_50%)] dark:bg-[radial-gradient(circle_at_30%_70%,rgba(206,91,45,0.1),transparent_50%)]" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -336,7 +348,7 @@ export default function BlogPage() {
                 variant="secondary"
                 className="mb-6 px-4 py-2 text-sm font-medium"
               >
-                Our Blog
+                DAK-SKY LOGISTICS BLOG
               </Badge>
             </motion.div>
 
@@ -346,11 +358,10 @@ export default function BlogPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Insights &{" "}
-              <span className="text-primary bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                Knowledge
-              </span>{" "}
-              Sharing
+              Logistics Insights &{" "}
+              <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                Industry Knowledge
+              </span>
             </motion.h1>
 
             <motion.p
@@ -359,9 +370,8 @@ export default function BlogPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Stay updated with the latest trends, best practices, and insights
-              from our team of experts in web development, design, and
-              technology.
+              Stay informed with expert insights on international shipping, freight forwarding, 
+              customs clearance, and supply chain management from our logistics professionals.
             </motion.p>
           </div>
         </div>
@@ -375,7 +385,7 @@ export default function BlogPage() {
               <div className="relative flex-1">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <Input
-                  placeholder="Search articles..."
+                  placeholder="Search logistics articles..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-10"
@@ -414,16 +424,16 @@ export default function BlogPage() {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl sm:text-4xl font-bold text-balance mb-6">
-                Featured Articles
+                Featured Logistics Articles
               </h2>
               <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto leading-relaxed">
-                Our most popular and impactful articles, handpicked by our
-                editorial team.
+                Essential guides and insights on international shipping, freight forwarding, 
+                and supply chain management from our logistics experts.
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-              {featuredPosts.slice(0, 2).map((post, index) => (
+              {featuredPosts.slice(0, 3).map((post, index) => (
                 <motion.div
                   key={post.id}
                   initial={{ opacity: 0, y: 30 }}
@@ -432,13 +442,13 @@ export default function BlogPage() {
                   viewport={{ once: true }}
                 >
                   <Card className="overflow-hidden glass glass-dark border-border/50 hover:border-primary/50 transition-all duration-300 group cursor-pointer h-full">
-                    <div className="relative overflow-hidden">
+                    <div className="relative overflow-hidden  -mt-6">
                       <Image
                         src={post.image || "/placeholder.svg"}
                         alt={post.title}
                         width={600}
                         height={300}
-                        className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                        className="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                       <div className="absolute top-4 left-4">
                         <Badge variant="secondary">{post.category}</Badge>
@@ -518,13 +528,13 @@ export default function BlogPage() {
                 layout
               >
                 <Card className="overflow-hidden glass glass-dark border-border/50 hover:border-primary/50 transition-all duration-300 group cursor-pointer h-full">
-                  <div className="relative overflow-hidden">
+                  <div className="relative overflow-hidden -mt-6">
                     <Image
                       src={post.image || "/placeholder.svg"}
                       alt={post.title}
                       width={400}
                       height={250}
-                      className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute top-4 left-4">
                       <Badge variant="secondary">{post.category}</Badge>
@@ -615,11 +625,11 @@ export default function BlogPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-balance mb-6">
-              Stay Updated
+              Stay Updated with Logistics Insights
             </h2>
             <p className="text-xl text-muted-foreground text-pretty mb-8 leading-relaxed">
-              Subscribe to our newsletter to get the latest articles and
-              insights delivered to your inbox.
+              Subscribe to our newsletter for the latest logistics trends, shipping updates, 
+              and freight forwarding insights delivered to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <Input placeholder="Enter your email" className="flex-1" />
