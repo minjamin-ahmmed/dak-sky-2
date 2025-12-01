@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../public/logo.png"
@@ -24,11 +23,32 @@ const navigation = [
 export function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
   const pathname = usePathname();
+  const isHome = pathname === "/";
+  const [isHeroSection, setIsHeroSection] = React.useState(true);
+
+  React.useEffect(() => {
+    if (!isHome) {
+      setIsHeroSection(false);
+      return;
+    }
+
+    const handleScroll = () => {
+      // Treat as \"hero\" while near the top of the page
+      setIsHeroSection(window.scrollY < 80);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isHome]);
 
   return (
     <motion.nav
       className={cn(
-        "sticky top-4 z-50 w-10/12 mx-auto border-b border-border/40 glass glass-dark backdrop-blur supports-[backdrop-filter]:bg-background/60 overflow-hidden transition-all duration-300",
+        "sticky top-4 z-50 w-10/12 mx-auto border-b border-border/40 glass glass-dark backdrop-blur bg-[#13253F]/90 overflow-hidden transition-all duration-300",
         isOpen 
           ? "md:rounded-full rounded-2xl" 
           : "rounded-full"
@@ -54,8 +74,8 @@ export function Navbar() {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+          <div className="hidden md:flex md:flex-1 justify-end">
+            <div className="ml-10 flex items-center space-x-4">
               {navigation.map((item, index) => (
                 <motion.div
                   key={item.name}
@@ -66,10 +86,12 @@ export function Navbar() {
                   <Link
                     href={item.href}
                     className={cn(
-                      "px-3 py-2 rounded-t-md text-sm font-medium transition-all duration-200 hover:text-primary relative",
-                      pathname === item.href
-                        ? "text-primary bg-primary/10"
-                        : "text-muted-foreground hover:bg-accent/10"
+                      "px-3 py-2 rounded-t-md text-sm font-medium transition-all duration-200 relative",
+                      isHome && isHeroSection
+                        ? "text-white hover:text-white/80"
+                        : pathname === item.href
+                          ? "text-primary bg-primary/10 hover:text-primary"
+                          : "text-muted-foreground hover:text-primary hover:bg-accent/10"
                     )}
                   >
                     {item.name}
@@ -88,7 +110,7 @@ export function Navbar() {
 
           {/* Theme Toggle & Mobile Menu Button */}
           <div className="flex items-center space-x-2">
-            <ThemeToggle />
+          
             <div className="md:hidden">
               <Button
                 variant="ghost"
@@ -146,9 +168,11 @@ export function Navbar() {
                       href={item.href}
                       className={cn(
                         "block px-3 py-2 rounded-md text-base font-medium transition-all duration-200",
-                        pathname === item.href
-                          ? "text-primary bg-primary/10"
-                          : "text-muted-foreground hover:text-primary hover:bg-accent/10"
+                        isHome && isHeroSection
+                          ? "text-white hover:text-white/80"
+                          : pathname === item.href
+                            ? "text-primary bg-primary/10"
+                            : "text-muted-foreground hover:text-primary hover:bg-accent/10"
                       )}
                       onClick={() => setIsOpen(false)}
                     >

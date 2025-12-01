@@ -1,83 +1,41 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
 :root {
-  /* Updated color tokens to match design brief with zinc palette and orange/blue accents */
+  /* Color tokens with zinc palette and blue accent */
   --background: oklch(0.98 0 0); /* zinc-50 equivalent */
   --foreground: oklch(0.09 0 0); /* zinc-900 equivalent */
   --card: oklch(0.97 0 0); /* Light card background */
   --card-foreground: oklch(0.09 0 0);
   --popover: oklch(0.98 0 0);
   --popover-foreground: oklch(0.09 0 0);
-  --primary: oklch(0.55 0.15 35);
-    /* orange #ce5b2d */
+  --primary: oklch(0.58 0.22 265); /* blue #2575FC */
   --primary-foreground: oklch(0.98 0 0);
   --secondary: oklch(0.96 0 0); /* zinc-100 equivalent */
   --secondary-foreground: oklch(0.09 0 0);
   --muted: oklch(0.96 0 0);
   --muted-foreground: oklch(0.45 0 0); /* zinc-600 equivalent */
-  --accent: oklch(0.55 0.15 35);
-    /* orange #ce5b2d for light mode */
+  --accent: oklch(0.58 0.22 265); /* blue #2575FC */
   --accent-foreground: oklch(0.98 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.98 0 0);
   --border: oklch(0.89 0 0); /* zinc-200 equivalent */
   --input: oklch(0.89 0 0);
-  --ring: oklch(0.55 0.15 35);
-    --chart-1: oklch(0.55 0.15 35);
+  --ring: oklch(0.58 0.22 265);
+  --chart-1: oklch(0.58 0.22 265);
   --chart-2: oklch(0.65 0.2 142); /* emerald accent */
-  --chart-3: oklch(0.65 0.25 29); /* orange accent */
+  --chart-3: oklch(0.65 0.22 265); /* blue accent */
   --chart-4: oklch(0.45 0 0);
   --chart-5: oklch(0.25 0 0);
   --radius: 0.625rem;
   --sidebar: oklch(0.98 0 0);
   --sidebar-foreground: oklch(0.09 0 0);
-  --sidebar-primary: oklch(0.55 0.15 35);
+  --sidebar-primary: oklch(0.58 0.22 265);
   --sidebar-primary-foreground: oklch(0.98 0 0);
   --sidebar-accent: oklch(0.96 0 0);
   --sidebar-accent-foreground: oklch(0.09 0 0);
   --sidebar-border: oklch(0.89 0 0);
-  --sidebar-ring: oklch(0.55 0.15 35);
-}
-
-.dark {
-  /* Updated dark mode tokens with zinc-950 background and orange accent */
-  --background: oklch(0.04 0 0); /* zinc-950 equivalent */
-  --foreground: oklch(0.98 0 0); /* zinc-100 equivalent */
-  --card: oklch(0.04 0 0);
-  --card-foreground: oklch(0.98 0 0);
-  --popover: oklch(0.04 0 0);
-  --popover-foreground: oklch(0.98 0 0);
-  --primary: oklch(0.65 0.15 35);
-    /* orange #ce5b2d for dark mode */
-  --primary-foreground: oklch(0.04 0 0);
-  --secondary: oklch(0.1 0 0); /* zinc-800 equivalent */
-  --secondary-foreground: oklch(0.98 0 0);
-  --muted: oklch(0.1 0 0);
-  --muted-foreground: oklch(0.65 0 0); /* zinc-300 equivalent */
-  --accent: oklch(0.65 0.15 35);
-    /* orange #ce5b2d accent */
-  --accent-foreground: oklch(0.04 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.15 0 0); /* zinc-800 equivalent */
-  --input: oklch(0.15 0 0);
-  --ring: oklch(0.65 0.15 35);
-    --chart-1: oklch(0.65 0.15 35);
-  --chart-2: oklch(0.65 0.2 142);
-  --chart-3: oklch(0.55 0.15 252);
-  --chart-4: oklch(0.65 0 0);
-  --chart-5: oklch(0.85 0 0);
-  --sidebar: oklch(0.04 0 0);
-  --sidebar-foreground: oklch(0.98 0 0);
-  --sidebar-primary: oklch(0.65 0.15 35);
-  --sidebar-primary-foreground: oklch(0.04 0 0);
-  --sidebar-accent: oklch(0.1 0 0);
-  --sidebar-accent-foreground: oklch(0.98 0 0);
-  --sidebar-border: oklch(0.15 0 0);
-  --sidebar-ring: oklch(0.65 0.15 35);
+  --sidebar-ring: oklch(0.58 0.22 265);
 }
 
 @theme inline {
@@ -128,16 +86,16 @@
   }
   body {
     @apply bg-background text-foreground;
+    -webkit-user-select: text;
+      -moz-user-select: text;
+      -ms-user-select: text;
+      user-select: text;
   }
 }
 
 @layer utilities {
   .glass {
     @apply bg-white/10 backdrop-blur-md border border-white/10;
-  }
-
-  .glass-dark {
-    @apply dark:bg-zinc-900/20 dark:backdrop-blur-md dark:border-white/10;
   }
 
   .smooth-scroll {
@@ -225,4 +183,22 @@
 *:focus-visible {
   outline: 2px solid hsl(var(--ring));
   outline-offset: 2px;
+}
+
+/* Ensure ALL text on the website is selectable - override any select-none classes */
+body,
+body * {
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
+}
+
+/* Allow text selection in form inputs */
+input,
+textarea {
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
 }

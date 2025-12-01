@@ -269,7 +269,7 @@ export default function BlogPage() {
         <section className="py-12">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
-              <div className="prose prose-lg dark:prose-invert max-w-none">
+              <div className="prose prose-lg max-w-none">
                 {selectedPost.content.split("\n\n").map((paragraph, index) => {
                   if (paragraph.startsWith("**") && paragraph.endsWith("**")) {
                     return (
@@ -335,7 +335,7 @@ export default function BlogPage() {
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(206,91,45,0.1),transparent_50%)] dark:bg-[radial-gradient(circle_at_30%_70%,rgba(206,91,45,0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(37,117,252,0.1),transparent_50%)]" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -432,7 +432,7 @@ export default function BlogPage() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredPosts.slice(0, 3).map((post, index) => (
                 <motion.div
                   key={post.id}
@@ -441,7 +441,7 @@ export default function BlogPage() {
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="overflow-hidden glass glass-dark border-border/50 hover:border-primary/50 transition-all duration-300 group cursor-pointer h-full">
+                  <Card className="overflow-hidden glass border-border/50 hover:border-primary/50 transition-all duration-300 group cursor-pointer">
                     <div className="relative overflow-hidden  -mt-6">
                       <Image
                         src={post.image || "/placeholder.svg"}
@@ -454,11 +454,11 @@ export default function BlogPage() {
                         <Badge variant="secondary">{post.category}</Badge>
                       </div>
                     </div>
-                    <CardContent className="p-6 flex flex-col h-full">
+                    <CardContent className="flex flex-col h-full">
                       <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors line-clamp-2">
                         {post.title}
                       </h3>
-                      <p className="text-muted-foreground mb-4 leading-relaxed line-clamp-3 flex-1">
+                      <p className="text-muted-foreground leading-relaxed line-clamp-2 flex-1 mb-8">
                         {post.excerpt}
                       </p>
 
@@ -527,7 +527,7 @@ export default function BlogPage() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 layout
               >
-                <Card className="overflow-hidden glass glass-dark border-border/50 hover:border-primary/50 transition-all duration-300 group cursor-pointer h-full">
+                <Card className="overflow-hidden glass border-border/50 hover:border-primary/50 transition-all duration-300 group cursor-pointer">
                   <div className="relative overflow-hidden -mt-6">
                     <Image
                       src={post.image || "/placeholder.svg"}
@@ -551,7 +551,7 @@ export default function BlogPage() {
                     <h3 className="text-lg font-semibold mb-3 group-hover:text-primary transition-colors line-clamp-2">
                       {post.title}
                     </h3>
-                    <p className="text-muted-foreground mb-4 leading-relaxed line-clamp-3 flex-1 text-sm">
+                    <p className="text-muted-foreground mb-8 leading-relaxed line-clamp-3 flex-1 text-sm">
                       {post.excerpt}
                     </p>
 

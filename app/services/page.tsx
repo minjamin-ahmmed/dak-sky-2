@@ -205,7 +205,7 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(206,91,45,0.1),transparent_50%)] dark:bg-[radial-gradient(circle_at_70%_30%,rgba(206,91,45,0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(37,117,252,0.1),transparent_50%)]" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -229,7 +229,7 @@ export default function ServicesPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               Comprehensive{" "}
-              <span className="text-primary bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
                 Logistics Services
               </span>{" "}
               for Your Business
@@ -260,7 +260,7 @@ export default function ServicesPage() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full glass glass-dark border-border/50 hover:border-primary/50 transition-all duration-300 group">
+                <Card className="h-full glass border-border/50 hover:border-primary/50 transition-all duration-300 group">
                   <CardContent className="p-8">
                     <div className="flex items-center justify-between mb-6">
                       <div className="flex items-center">
@@ -332,7 +332,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-gradient-to-b from-[#0A1435] via-[#1B2C5D] to-[#F4F8FF]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -341,10 +341,10 @@ export default function ServicesPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-balance mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-balance text-white drop-shadow-lg mb-6">
               Our Process
             </h2>
-            <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-white/80 text-pretty max-w-3xl mx-auto leading-relaxed">
               We follow a proven methodology to ensure your project is delivered
               on time, within budget, and exceeds your expectations.
             </p>
@@ -358,20 +358,25 @@ export default function ServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center"
               >
-                <div className="relative mb-6">
-                  <div className="w-16 h-16 mx-auto rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                    <step.icon className="h-8 w-8 text-primary" />
-                  </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-sm font-bold">
-                    {step.step}
+                <div className="relative h-full rounded-2xl bg-white/10 backdrop-blur border border-white/20 p-8 shadow-xl shadow-black/30 overflow-hidden group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                  <div className="relative flex flex-col items-center text-center gap-4">
+                    <div className="w-16 h-16 rounded-full bg-white/15 text-white flex items-center justify-center shadow-lg shadow-primary/40">
+                      <step.icon className="h-9 w-9" strokeWidth={1.6} />
+                    </div>
+{/* 
+                    <div className="absolute -top-3 -right-3 w-10 h-10 bg-white text-primary rounded-full flex items-center justify-center text-base font-bold shadow-md">
+                      {step.step}
+                    </div> */}
+
+                    <h3 className="text-lg font-semibold text-white">{step.title}</h3>
+                    <p className="text-white/80 text-sm leading-relaxed">
+                      {step.description}
+                    </p>
                   </div>
                 </div>
-                <h3 className="text-lg font-semibold mb-3">{step.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {step.description}
-                </p>
               </motion.div>
             ))}
           </div>

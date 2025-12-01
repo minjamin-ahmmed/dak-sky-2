@@ -75,7 +75,7 @@ const contactMethods = [
   {
     icon: Phone,
     title: "Call Us",
-    description: "Speak directly with our logistics team during business hours",
+    description: "Speak directly with our logistics team",
     contact: "+880 123 456 7890",
     action: "tel:+8801234567890",
   },
@@ -136,8 +136,8 @@ export default function ContactPage() {
           animate={{ opacity: 1, scale: 1 }}
           className="text-center max-w-md mx-auto p-8"
         >
-          <div className="w-16 h-16 bg-green-100 dark:bg-green-900/20 rounded-full flex items-center justify-center mx-auto mb-6">
-            <CheckCircle className="h-8 w-8 text-green-600 dark:text-green-400" />
+          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <CheckCircle className="h-8 w-8 text-green-600" />
           </div>
           <h2 className="text-2xl font-bold mb-4">Thank You!</h2>
           <p className="text-muted-foreground mb-6">
@@ -157,7 +157,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(206,91,45,0.1),transparent_50%)] dark:bg-[radial-gradient(circle_at_50%_50%,rgba(206,91,45,0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(37,117,252,0.1),transparent_50%)]" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -211,7 +211,7 @@ export default function ContactPage() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="text-center glass glass-dark border-border/50 hover:border-primary/50 transition-all duration-300 group">
+                <Card className="text-center glass border-border/50 hover:border-primary/50 transition-all duration-300 group">
                   <CardContent className="p-8">
                     <div className="w-16 h-16 mx-auto rounded-full bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                       <method.icon className="h-8 w-8" />
@@ -244,7 +244,7 @@ export default function ContactPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <Card className="glass glass-dark border-border/50">
+              <Card className="glass border-border/50">
                 <CardContent className="p-8">
                   <h2 className="text-2xl font-bold mb-6">
                     Request a Quote
@@ -401,7 +401,7 @@ export default function ContactPage() {
                   {offices.map((office, index) => (
                     <Card
                       key={index}
-                      className="glass glass-dark border-border/50"
+                      className="glass border-border/50"
                     >
                       <CardContent className="p-6">
                         <h3 className="text-lg font-semibold mb-3">
@@ -440,7 +440,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <Card className="glass glass-dark border-border/50">
+              <Card className="glass border-border/50">
                 <CardContent className="p-6">
                   <h3 className="text-lg font-semibold mb-4">Business Hours</h3>
                   <div className="space-y-2 text-muted-foreground">
@@ -501,7 +501,7 @@ export default function ContactPage() {
             <Accordion type="single" collapsible className="w-full space-y-4">
               <AccordionItem
                 value="item-1"
-                className="glass glass-dark border-border/50 rounded-lg px-6"
+                className="glass border-border/50 rounded-lg px-6"
               >
                 <AccordionTrigger className="text-lg font-semibold hover:no-underline">
                   How long does a typical project take?
@@ -517,7 +517,7 @@ export default function ContactPage() {
 
               <AccordionItem
                 value="item-2"
-                className="glass glass-dark border-border/50 rounded-lg px-6"
+                className="glass border-border/50 rounded-lg px-6"
               >
                 <AccordionTrigger className="text-lg font-semibold hover:no-underline">
                   Do you work with international clients?
@@ -532,7 +532,7 @@ export default function ContactPage() {
 
               <AccordionItem
                 value="item-3"
-                className="glass glass-dark border-border/50 rounded-lg px-6"
+                className="glass border-border/50 rounded-lg px-6"
               >
                 <AccordionTrigger className="text-lg font-semibold hover:no-underline">
                   What's included in your maintenance packages?
@@ -547,7 +547,7 @@ export default function ContactPage() {
 
               <AccordionItem
                 value="item-4"
-                className="glass glass-dark border-border/50 rounded-lg px-6"
+                className="glass border-border/50 rounded-lg px-6"
               >
                 <AccordionTrigger className="text-lg font-semibold hover:no-underline">
                   Can you help with existing projects?
@@ -562,7 +562,7 @@ export default function ContactPage() {
 
               <AccordionItem
                 value="item-5"
-                className="glass glass-dark border-border/50 rounded-lg px-6"
+                className="glass border-border/50 rounded-lg px-6"
               >
                 <AccordionTrigger className="text-lg font-semibold hover:no-underline">
                   What technologies do you specialize in?
@@ -577,7 +577,7 @@ export default function ContactPage() {
 
               <AccordionItem
                 value="item-6"
-                className="glass glass-dark border-border/50 rounded-lg px-6"
+                className="glass border-border/50 rounded-lg px-6"
               >
                 <AccordionTrigger className="text-lg font-semibold hover:no-underline">
                   How do you handle project communication?

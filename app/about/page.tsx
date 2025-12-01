@@ -83,10 +83,15 @@ const timeline = [
 ];
 
 const achievements = [
-  { end: 5000, suffix: "+", label: "Shipments Delivered" },
-  { end: 250, suffix: "+", label: "Satisfied Clients" },
-  { end: 12, suffix: "+", label: "Years Experience" },
-  { end: 99, suffix: "%", label: "On-Time Delivery" },
+    {
+    end: 5000,
+    suffix: "+",
+    label: "Shipments Completed",
+    icon: "/cargo-ship.svg",
+  },
+  { end: 250, suffix: "+", label: "Satisfied Clients", icon: "/review.svg" },
+  { end: 12, suffix: "+", label: "Years Experience", icon: "/expertise.svg" },
+  { end: 24, suffix: "/7", label: "Customer Support", icon: "/review.svg" },
 ];
 
 export default function AboutPage() {
@@ -95,7 +100,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(206,91,45,0.1),transparent_50%)] dark:bg-[radial-gradient(circle_at_30%_20%,rgba(206,91,45,0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(37,117,252,0.1),transparent_50%)]" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -119,7 +124,7 @@ export default function AboutPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               Connecting{" "}
-              <span className="text-primary bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
                 Global Markets
               </span>{" "}
               Through Logistics Excellence
@@ -140,7 +145,7 @@ export default function AboutPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-[#13253F]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="grid grid-cols-2 lg:grid-cols-4 gap-8"
@@ -150,21 +155,43 @@ export default function AboutPage() {
             viewport={{ once: true }}
           >
             {achievements.map((achievement, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">
-                  <CountUp
-                    end={achievement.end}
-                    suffix={achievement.suffix}
-                    enableScrollSpy
-                    scrollSpyOnce
-                    duration={2}
-                    separator=","
-                  />
+              <motion.div
+                key={index}
+                className="text-center"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                {/* Icon and Label in Flex */}
+                <div className="flex items-center justify-center gap-3 mb-4">
+                  <div className="">
+                    <Image
+                      src={achievement.icon}
+                      alt={achievement.label}
+                      width={48}
+                      height={48}
+                      className="w-14 h-14"
+                    />
+                  </div>
+                  <div>
+                    {/* Counter */}
+                    <div className="text-3xl lg:text-4xl font-bold text-white text-left">
+                      <CountUp
+                        end={achievement.end}
+                        suffix={achievement.suffix}
+                        enableScrollSpy
+                        scrollSpyOnce
+                        duration={2}
+                        separator=","
+                      />
+                    </div>
+                    <div className="text-white/80 font-medium text-sm lg:text-base text-left">
+                      {achievement.label}
+                    </div>
+                  </div>
                 </div>
-                <div className="text-muted-foreground font-medium">
-                  {achievement.label}
-                </div>
-              </div>
+              </motion.div>
             ))}
           </motion.div>
         </div>
@@ -211,7 +238,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="glass glass-dark rounded-2xl p-8 border-border/50">
+              <div className="glass rounded-2xl p-8 border-border/50">
                 <Image
                   src="/image-1.jpeg"
                   alt="Our team working together"
@@ -226,7 +253,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-gradient-to-b from-[#131B45] via-[#1F2C62] to-[#F5F8FF]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -235,10 +262,10 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-balance mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-balance text-white drop-shadow-lg mb-6">
               Our Values
             </h2>
-            <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-white/80 text-pretty max-w-3xl mx-auto leading-relaxed">
               These core values guide everything we do and shape how we work
               with our clients and each other.
             </p>
@@ -253,17 +280,17 @@ export default function AboutPage() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full glass glass-dark border-border/50 hover:border-primary/50 transition-all duration-300 group">
-                  <CardContent className="p-8">
+                <Card className="h-full bg-white/5 backdrop-blur border-white/20 hover:border-primary/50 hover:bg-white/10 transition-all duration-300 group">
+                  <CardContent className="p-8 text-white">
                     <div className="flex items-center mb-6">
-                      <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
-                        <value.icon className="h-6 w-6" />
+                      <div className="p-3 rounded-lg bg-white/10 text-white group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 shadow-lg shadow-primary/30">
+                        <value.icon className="h-6 w-6" strokeWidth={1.8} />
                       </div>
-                      <h3 className="text-xl font-semibold ml-4">
+                      <h3 className="text-xl text-white font-semibold ml-4">
                         {value.title}
                       </h3>
                     </div>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-white/80 leading-relaxed">
                       {value.description}
                     </p>
                   </CardContent>
@@ -316,7 +343,7 @@ export default function AboutPage() {
                       index % 2 === 0 ? "md:pr-12" : "md:pl-12 md:ml-auto"
                     }`}
                   >
-                    <Card className="glass glass-dark border-border/50">
+                    <Card className="glass border-border/50">
                       <CardContent className="p-6">
                         <div className="flex items-center mb-3">
                           <Calendar className="h-4 w-4 text-primary mr-2" />

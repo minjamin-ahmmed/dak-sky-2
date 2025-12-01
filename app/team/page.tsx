@@ -240,7 +240,7 @@ export default function TeamPage() {
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(206,91,45,0.1),transparent_50%)] dark:bg-[radial-gradient(circle_at_80%_20%,rgba(206,91,45,0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(37,117,252,0.1),transparent_50%)]" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -285,7 +285,7 @@ export default function TeamPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-[#13253F]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="grid grid-cols-2 lg:grid-cols-4 gap-8"
@@ -296,7 +296,7 @@ export default function TeamPage() {
           >
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">
+                <div className="text-3xl lg:text-4xl font-bold text-white mb-2">
                   <CountUp
                     end={stat.end}
                     suffix={stat.suffix}
@@ -306,7 +306,7 @@ export default function TeamPage() {
                     separator=","
                   />
                 </div>
-                <div className="text-muted-foreground font-medium">
+                <div className="text-white/80 font-medium">
                   {stat.label}
                 </div>
               </div>
@@ -352,7 +352,7 @@ export default function TeamPage() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 layout
               >
-                <Card className="overflow-hidden glass glass-dark border-border/50 hover:border-primary/50 transition-all duration-300 group">
+                <Card className="overflow-hidden glass border-border/50 hover:border-primary/50 transition-all duration-300 group">
                   <div className="relative overflow-hidden">
                     <Image
                       src={member.image || "/placeholder.svg"}
@@ -467,7 +467,7 @@ export default function TeamPage() {
       </section>
 
       {/* Culture Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-gradient-to-b from-[#101A3A] via-[#1D2F5C] to-[#F5F8FF]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -476,16 +476,16 @@ export default function TeamPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-balance mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-balance text-white drop-shadow-lg mb-6">
               Our Values
             </h2>
-            <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-white/80 text-pretty max-w-3xl mx-auto leading-relaxed">
               At Dak-sky, we're committed to excellence, reliability, and building 
               strong partnerships that drive global trade success.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {[
               {
                 title: "Reliability First",
@@ -505,6 +505,12 @@ export default function TeamPage() {
                   "We work closely with clients to understand their needs and provide customized logistics solutions that drive their business growth.",
                 icon: Handshake,
               },
+              {
+                title: "Quality Assurance",
+                description:
+                  "We ensure the highest quality of service and products to our clients.",
+                icon: CheckCircle,
+              }
             ].map((value, index) => {
               const IconComponent = value.icon;
               return (
@@ -515,15 +521,13 @@ export default function TeamPage() {
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="h-full glass glass-dark border-border/50 hover:border-primary/50 transition-all duration-300 group hover:shadow-lg">
-                    <CardContent className="p-8 text-center">
-                      <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
-                        <IconComponent className="h-8 w-8" />
+                  <Card className="h-full bg-white/10 backdrop-blur border-white/20 hover:border-primary/50 hover:bg-white/15 transition-all duration-300 group hover:shadow-xl hover:shadow-primary/30">
+                    <CardContent className="p-8 text-center text-white">
+                      <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/15 text-white mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 shadow-lg shadow-primary/20">
+                        <IconComponent className="h-8 w-8" strokeWidth={1.6} />
                       </div>
-                      <h3 className="text-xl font-semibold mb-3 text-foreground">
-                        {value.title}
-                      </h3>
-                      <p className="text-muted-foreground leading-relaxed text-sm">
+                      <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
+                      <p className="text-white/80 leading-relaxed text-sm">
                         {value.description}
                       </p>
                     </CardContent>

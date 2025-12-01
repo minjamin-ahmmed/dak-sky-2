@@ -2,7 +2,6 @@ import type React from "react";
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
-import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ScrollToTop } from "@/components/scroll-to-top";
@@ -58,24 +57,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="smooth-scroll" suppressHydrationWarning>
+    <html lang="en" className="smooth-scroll">
       <body className={`font-sans ${spaceGrotesk.variable} antialiased`}>
         <DakSkyLoader />
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Suspense fallback={null}>
-            <div className="min-h-screen flex flex-col">
-              <Navbar />
-              <main className="flex-1">{children}</main>
-              <Footer />
-              <ScrollToTop />
-            </div>
-          </Suspense>
-        </ThemeProvider>
+        <Suspense fallback={null}>
+          <div className="min-h-screen flex flex-col">
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <ScrollToTop />
+          </div>
+        </Suspense>
         <Analytics />
       </body>
     </html>

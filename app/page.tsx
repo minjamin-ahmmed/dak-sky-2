@@ -18,8 +18,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
-
-
 const services = [
   {
     icon: Plane,
@@ -33,7 +31,11 @@ const services = [
     title: "Sea Freight",
     description:
       "Cost-effective sea freight solutions for bulk shipments. Our extensive network ensures smooth transportation via major shipping routes.",
-    features: ["FCL & LCL Options", "Port-to-Port Service", "Competitive Rates"],
+    features: [
+      "FCL & LCL Options",
+      "Port-to-Port Service",
+      "Competitive Rates",
+    ],
   },
   {
     icon: Truck,
@@ -47,7 +49,11 @@ const services = [
     title: "Warehousing Solutions",
     description:
       "Secure storage facilities with inventory management services. Ideal for businesses needing temporary or long-term storage solutions.",
-    features: ["Secure Storage", "Inventory Management", "Distribution Support"],
+    features: [
+      "Secure Storage",
+      "Inventory Management",
+      "Distribution Support",
+    ],
   },
 ];
 
@@ -77,7 +83,7 @@ const caseStudies = [
     category: "Sourcing",
   },
   {
-      title: "Machinery Import from China",
+    title: "Machinery Import from China",
     description:
       "Successfully managed a large-scale machinery import operation from Shanghai, China to Dhaka, Bangladesh. Delivered 100 containers on time with zero customs delays.",
     image: "/image-4.jpeg",
@@ -96,10 +102,15 @@ const partners = [
 ];
 
 const stats = [
-  { end: 5000, suffix: "+", label: "Shipments Completed" },
-  { end: 250, suffix: "+", label: "Satisfied Clients" },
-  { end: 12, suffix: "+", label: "Years Experience" },
-  { end: 24, suffix: "/7", label: "Customer Support" },
+  {
+    end: 5000,
+    suffix: "+",
+    label: "Shipments Completed",
+    icon: "/cargo-ship.svg",
+  },
+  { end: 250, suffix: "+", label: "Satisfied Clients", icon: "/review.svg" },
+  { end: 12, suffix: "+", label: "Years Experience", icon: "/expertise.svg" },
+  { end: 24, suffix: "/7", label: "Customer Support", icon: "/review.svg" },
 ];
 
 export default function HomePage() {
@@ -121,13 +132,13 @@ export default function HomePage() {
         </div>
 
         {/* Dark Overlay for Readability */}
-        <div className="absolute inset-0 bg-black/40 dark:bg-black/50" />
+        <div className="absolute inset-0 bg-[#13253F]/40" />
 
         {/* Subtle Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-transparent to-black/30 dark:from-black/30 dark:via-transparent dark:to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#13253F]/10 via-transparent to-[#13253F]/10" />
 
         {/* Accent Gradient Overlay */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(206,91,45,0.1),transparent_70%)] dark:bg-[radial-gradient(circle_at_50%_50%,rgba(206,91,45,0.15),transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(37,117,252,0.1),transparent_70%)]" />
 
         {/* Animated particles */}
         <div className="absolute inset-0 z-10">
@@ -162,9 +173,10 @@ export default function HomePage() {
             >
               <Badge
                 variant="secondary"
-                className="mb-6 px-4 py-2 text-sm font-medium backdrop-blur-md bg-background/80 dark:bg-background/70 border border-border/50"
+                className="mb-6 px-4 py-2 text-sm font-medium backdrop-blur-md bg-background/80 border border-border/50"
               >
-                <Globe className="h-4 w-4" /> Connecting China, Bangladesh & Europe
+                <Globe className="h-4 w-4" /> Connecting China, Bangladesh &
+                Europe
               </Badge>
             </motion.div>
 
@@ -182,13 +194,14 @@ export default function HomePage() {
             </motion.h1>
 
             <motion.p
-              className="text-xl sm:text-2xl text-gray-100 dark:text-foreground/80 text-pretty mb-8 leading-relaxed drop-shadow-md"
+              className="text-xl sm:text-2xl text-gray-100 text-pretty mb-8 leading-relaxed drop-shadow-md"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Reliable freight forwarding services connecting China to Bangladesh and Europe. 
-              Fast, secure, and efficient logistics solutions tailored to your business needs.
+              Reliable freight forwarding services connecting China to
+              Bangladesh and Europe. Fast, secure, and efficient logistics
+              solutions tailored to your business needs.
             </motion.p>
 
             <motion.div
@@ -199,7 +212,7 @@ export default function HomePage() {
             >
               <Button
                 size="lg"
-                className="px-8 py-6 text-lg font-semibold group"
+                className="px-8 py-6 text-lg group bg-gradient-to-tl from-[#6A11CB] to-[#2575FC] text-white shadow-lg rounded-full hover:from-[#7E3FF2] hover:to-[#1E90FF]"
                 asChild
               >
                 <Link href="/contact">
@@ -210,7 +223,7 @@ export default function HomePage() {
               {/* <Button
                 variant="outline"
                 size="lg"
-                className="px-8 py-6 text-lg font-semibold glass glass-dark bg-transparent hover:text-primary"
+                className="px-8 py-6 text-lg font-semibold glass bg-transparent hover:text-primary"
                 asChild
               >
                 <Link href="/projects">View Case Studies</Link>
@@ -232,7 +245,7 @@ export default function HomePage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-[#001D38]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="grid grid-cols-2 lg:grid-cols-4 gap-8"
@@ -242,46 +255,69 @@ export default function HomePage() {
             viewport={{ once: true }}
           >
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">
-                  <CountUp
-                    end={stat.end}
-                    suffix={stat.suffix}
-                    enableScrollSpy
-                    scrollSpyOnce
-                    duration={2}
-                    separator=","
-                  />
+              <motion.div
+                key={index}
+                className="text-center"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                {/* Icon and Label in Flex */}
+                <div className="flex items-center justify-center gap-3 mb-4">
+                  <div className="">
+                    <Image
+                      src={stat.icon}
+                      alt={stat.label}
+                      width={48}
+                      height={48}
+                      className="w-14 h-14"
+                    />
+                  </div>
+                  <div>
+                    {/* Counter */}
+                    <div className="text-3xl lg:text-4xl font-bold text-white text-left">
+                      <CountUp
+                        end={stat.end}
+                        suffix={stat.suffix}
+                        enableScrollSpy
+                        scrollSpyOnce
+                        duration={2}
+                        separator=","
+                      />
+                    </div>
+                    <div className="text-white/80 font-medium text-sm lg:text-base text-left">
+                      {stat.label}
+                    </div>
+                  </div>
                 </div>
-                <div className="text-muted-foreground font-medium">
-                  {stat.label}
-                </div>
-              </div>
+              </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 select-text">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 select-text">
           <motion.div
-            className="text-center mb-16"
+            className="text-center mb-16 select-text"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-balance mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-balance mb-6 select-text">
               Our Services
             </h2>
-            <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto leading-relaxed">
-              Comprehensive logistics and freight forwarding services to streamline 
-              your international shipping operations and expand your global reach.
+            <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto leading-relaxed select-text">
+              Comprehensive logistics and freight forwarding services to
+              streamline your international shipping operations and expand your
+              global reach.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 select-text">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -289,25 +325,26 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
+                className="select-text"
               >
-                <Card className="h-full glass glass-dark border-border/50 hover:border-primary/50 transition-all duration-300 group">
-                  <CardContent className="p-8">
+                <Card className="h-full bg-white/80 backdrop-blur-sm border-border/30 hover:border-primary/50 hover:shadow-lg transition-all duration-300 group select-text">
+                  <CardContent className="p-4 select-text">
                     <div className="flex items-center mb-6">
                       <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                         <service.icon className="h-6 w-6" />
                       </div>
-                      <h3 className="text-xl font-semibold ml-4">
+                      <h3 className="text-xl font-semibold ml-4 select-text">
                         {service.title}
                       </h3>
                     </div>
-                    <p className="text-muted-foreground mb-6 leading-relaxed">
+                    <p className="text-muted-foreground mb-6 leading-relaxed select-text">
                       {service.description}
                     </p>
                     <ul className="space-y-2">
                       {service.features.map((feature, featureIndex) => (
                         <li
                           key={featureIndex}
-                          className="flex items-center text-sm"
+                          className="flex items-center text-sm select-text"
                         >
                           <CheckCircle className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
                           {feature}
@@ -323,7 +360,7 @@ export default function HomePage() {
       </section>
 
       {/* Featured Projects Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-gradient-to-t from-[#131B45] via-[#1F2C62]/50 to-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -332,12 +369,12 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-balance mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-balance text-[#002B74] mb-6">
               Success Stories
             </h2>
-            <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto leading-relaxed">
-              Explore real examples of how we've helped businesses streamline their 
-              international shipping and overcome logistics challenges.
+            <p className="text-xl text-[#101010] text-pretty max-w-3xl mx-auto leading-relaxed">
+              Explore real examples of how we've helped businesses streamline
+              their international shipping and overcome logistics challenges.
             </p>
           </motion.div>
 
@@ -350,7 +387,7 @@ export default function HomePage() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="overflow-hidden glass glass-dark border-border/50 hover:border-primary/50 transition-all duration-300 group">
+                <Card className="overflow-hidden bg-white/80 backdrop-blur-sm border-border/30 hover:border-primary/50 hover:shadow-lg transition-all duration-300 group">
                   <div className="relative overflow-hidden -mt-6">
                     <Image
                       src={project.image || "/placeholder.svg"}
@@ -394,7 +431,7 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="default" size="lg" asChild>
               <Link href="/services">
                 View All Case Studies
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -418,7 +455,8 @@ export default function HomePage() {
               Trusted Logistics Partners
             </h2>
             <p className="text-muted-foreground">
-              We're proud to partner with leading businesses across China, Bangladesh, and Europe.
+              We're proud to partner with leading businesses across China,
+              Bangladesh, and Europe.
             </p>
           </motion.div>
 
@@ -427,7 +465,7 @@ export default function HomePage() {
             {/* Gradient fade masks */}
             <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
             <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
-            
+
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -440,7 +478,7 @@ export default function HomePage() {
                 {partners.map((client, index) => (
                   <div
                     key={`first-${index}`}
-                    className="flex-shrink-0 flex items-center justify-center p-4 rounded-lg glass glass-dark border-border/30 hover:border-primary/30 transition-all duration-300 w-[180px] h-[100px]"
+                    className="flex-shrink-0 flex items-center justify-center p-4 rounded-lg glass border-border/30 hover:border-primary/30 transition-all duration-300 w-[180px] h-[100px]"
                   >
                     <Image
                       src={client.logo || "/placeholder.svg"}
@@ -455,7 +493,7 @@ export default function HomePage() {
                 {partners.map((client, index) => (
                   <div
                     key={`second-${index}`}
-                    className="flex-shrink-0 flex items-center justify-center p-4 rounded-lg glass glass-dark border-border/30 hover:border-primary/30 transition-all duration-300 w-[180px] h-[100px]"
+                    className="flex-shrink-0 flex items-center justify-center p-4 rounded-lg glass border-border/30 hover:border-primary/30 transition-all duration-300 w-[180px] h-[100px]"
                   >
                     <Image
                       src={client.logo || "/placeholder.svg"}
@@ -486,8 +524,8 @@ export default function HomePage() {
               Ready to Ship with Confidence?
             </h2>
             <p className="text-xl text-muted-foreground text-pretty mb-8 leading-relaxed">
-              Let's discuss your logistics needs and find the perfect shipping solution 
-              for your business. Get a free quote today.
+              Let's discuss your logistics needs and find the perfect shipping
+              solution for your business. Get a free quote today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
