@@ -98,7 +98,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen -mt-18">
       {/* Hero Section */}
-      <section className="relative py-10 lg:py-16 overflow-hidden">
+      <section className="relative pb-10 pt-20 lg:pb-16 lg:pt-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(37,117,252,0.1),transparent_50%)]" />
 

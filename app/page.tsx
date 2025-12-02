@@ -173,7 +173,7 @@ export default function HomePage() {
             >
               <Badge
                 variant="secondary"
-                className="mb-6 px-4 py-2 text-sm font-medium backdrop-blur-md bg-background/80 border border-border/50"
+                className="mb-6 px-4 py-2 text-sm font-medium glass backdrop-blur-md bg-[#13253F]/80 text-white border border-border/50"
               >
                 <Globe className="h-4 w-4" /> Connecting China, Bangladesh &
                 Europe
@@ -396,11 +396,11 @@ export default function HomePage() {
                       height={300}
                       className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
                     />
-                    <div className="absolute top-4 left-4">
+                    <div className="absolute top-8 left-4">
                       <Badge variant="secondary">{project.category}</Badge>
                     </div>
                   </div>
-                  <CardContent className="px-6">
+                  <CardContent className="px-6 pb-4">
                     <h3 className="text-xl font-semibold mb-3">
                       {project.title}
                     </h3>

@@ -91,7 +91,7 @@ export function Navbar() {
                   <Link
                     href={item.href}
                     className={cn(
-                      "px-3 py-2 rounded-t-md text-sm font-medium transition-all duration-200 relative",
+                      "px-3 py-2 rounded-t-md font-medium transition-all duration-200 relative",
                       isHome && isHeroSection
                         ? "text-white hover:text-white/80"
                         : pathname === item.href
