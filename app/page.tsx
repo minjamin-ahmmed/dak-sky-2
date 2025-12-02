@@ -392,7 +392,7 @@ export default function HomePage() {
                     <Image
                       src={project.image || "/placeholder.svg"}
                       alt={project.title}
-                      width={400}
+                      width={500}
                       height={300}
                       className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
                     />

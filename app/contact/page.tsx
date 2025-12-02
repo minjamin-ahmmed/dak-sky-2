@@ -92,7 +92,7 @@ const offices = [
   {
     city: "Dhaka, Bangladesh",
     address: "Gulshan 2, Road 45",
-    zipcode: "Dhaka 1212, Bangladesh",
+    zipcode: "Dhaka 1212",
     phone: "+880 123 456 7890",
     email: "dhaka@dak-sky.com",
     country: "Bangladesh",
@@ -100,7 +100,7 @@ const offices = [
   {
     city: "Guangzhou, China",
     address: "Tianhe District, Business Center",
-    zipcode: "Guangzhou, Guangdong, China",
+    zipcode: "Guangzhou, Guangdong",
     phone: "+86 20 1234 5678",
     email: "guangzhou@dak-sky.com",
     country: "China",
