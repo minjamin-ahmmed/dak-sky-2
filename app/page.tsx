@@ -245,7 +245,7 @@ export default function HomePage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-[#001D38]">
+      <section className="py-8 bg-[#001D38]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="grid grid-cols-2 lg:grid-cols-4 gap-8"
@@ -298,7 +298,7 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 select-text">
+      <section className="py-10 select-text">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 select-text">
           <motion.div
             className="text-center mb-16 select-text"
@@ -360,7 +360,7 @@ export default function HomePage() {
       </section>
 
       {/* Featured Projects Section */}
-      <section className="py-20 bg-gradient-to-t from-[#131B45] via-[#1F2C62]/50 to-white">
+      <section className="py-10 bg-gradient-to-t from-[#131B45] via-[#1F2C62]/50 to-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -442,7 +442,7 @@ export default function HomePage() {
       </section>
 
       {/* Client Logos Section */}
-      <section className="py-16">
+      <section className="py-8">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-12"
@@ -511,7 +511,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary/5">
+      <section className="py-10 bg-primary/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center max-w-3xl mx-auto"

@@ -238,7 +238,7 @@ export default function TeamPage() {
   return (
     <div className="min-h-screen -mt-18">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
+      <section className="relative py-10 lg:py-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(37,117,252,0.1),transparent_50%)]" />
 
@@ -251,7 +251,7 @@ export default function TeamPage() {
             >
               <Badge
                 variant="secondary"
-                className="mb-6 px-4 py-2 text-sm font-medium"
+                className="mt-8 mb-4 px-4 py-2 text-sm font-medium"
               >
                 MEET THE DAK-SKY TEAM
               </Badge>
@@ -285,7 +285,7 @@ export default function TeamPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-[#13253F]">
+      <section className="py-8 bg-[#13253F]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="grid grid-cols-2 lg:grid-cols-4 gap-8"
@@ -316,7 +316,7 @@ export default function TeamPage() {
       </section>
 
       {/* Filter Section */}
-      <section className="py-12">
+      <section className="py-6">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="flex flex-wrap justify-center gap-4"
@@ -341,7 +341,7 @@ export default function TeamPage() {
       </section>
 
       {/* Team Grid */}
-      <section className="py-20">
+      <section className="py-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {filteredMembers.map((member, index) => (
@@ -467,7 +467,7 @@ export default function TeamPage() {
       </section>
 
       {/* Culture Section */}
-      <section className="py-20 bg-gradient-to-b from-[#101A3A] via-[#1D2F5C] to-[#F5F8FF]">
+      <section className="py-10 bg-gradient-to-b from-[#101A3A] via-[#1D2F5C] to-[#F5F8FF]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -540,7 +540,7 @@ export default function TeamPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary/5">
+      <section className="py-10 bg-primary/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center max-w-3xl mx-auto"

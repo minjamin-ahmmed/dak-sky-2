@@ -95,6 +95,7 @@ const offices = [
     zipcode: "Dhaka 1212, Bangladesh",
     phone: "+880 123 456 7890",
     email: "dhaka@dak-sky.com",
+    country: "Bangladesh",
   },
   {
     city: "Guangzhou, China",
@@ -102,6 +103,7 @@ const offices = [
     zipcode: "Guangzhou, Guangdong, China",
     phone: "+86 20 1234 5678",
     email: "guangzhou@dak-sky.com",
+    country: "China",
   },
 ];
 
@@ -155,7 +157,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen -mt-18">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
+      <section className="relative py-10 lg:py-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(37,117,252,0.1),transparent_50%)]" />
 
@@ -168,7 +170,7 @@ export default function ContactPage() {
             >
               <Badge
                 variant="secondary"
-                className="mb-6 px-4 py-2 text-sm font-medium"
+                className="mt-8 mb-4 px-4 py-2 text-sm font-medium"
               >
                 Get In Touch
               </Badge>
@@ -181,7 +183,7 @@ export default function ContactPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               Let's Discuss Your{" "}
-              <span className="text-primary bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
                 Logistics Needs
               </span>
             </motion.h1>
@@ -200,7 +202,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Methods */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-8 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {contactMethods.map((method, index) => (
@@ -234,9 +236,9 @@ export default function ContactPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-20">
+      <section className="py-8">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -245,7 +247,7 @@ export default function ContactPage() {
               viewport={{ once: true }}
             >
               <Card className="glass border-border/50">
-                <CardContent className="p-8">
+                <CardContent className="p-4">
                   <h2 className="text-2xl font-bold mb-6">
                     Request a Quote
                   </h2>
@@ -304,12 +306,12 @@ export default function ContactPage() {
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <div>
+                      <div className="w-full">
                         <Label htmlFor="service">Service Needed *</Label>
                         <Select
                           onValueChange={(value) => setValue("service", value)}
                         >
-                          <SelectTrigger className="mt-2">
+                          <SelectTrigger className="mt-2 w-full">
                             <SelectValue placeholder="Select a service" />
                           </SelectTrigger>
                           <SelectContent>
@@ -326,12 +328,12 @@ export default function ContactPage() {
                           </p>
                         )}
                       </div>
-                      <div>
+                      <div className="w-full">
                         <Label htmlFor="budget">Shipping Frequency *</Label>
                         <Select
                           onValueChange={(value) => setValue("budget", value)}
                         >
-                          <SelectTrigger className="mt-2">
+                          <SelectTrigger className="mt-2 w-full">
                             <SelectValue placeholder="Select shipping frequency" />
                           </SelectTrigger>
                           <SelectContent>
@@ -413,6 +415,7 @@ export default function ContactPage() {
                             <div>
                               <p>{office.address}</p>
                               <p>{office.zipcode}</p>
+                              <p>{office.country}</p>
                             </div>
                           </div>
                           <div className="flex items-center">
@@ -440,159 +443,13 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <Card className="glass border-border/50">
-                <CardContent className="p-6">
-                  <h3 className="text-lg font-semibold mb-4">Business Hours</h3>
-                  <div className="space-y-2 text-muted-foreground">
-                    <div className="flex items-center justify-between">
-                      <span>Monday - Friday</span>
-                      <span>9:00 AM - 6:00 PM BST</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span>Saturday</span>
-                      <span>10:00 AM - 2:00 PM BST</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span>Sunday</span>
-                      <span>Closed</span>
-                    </div>
-                  </div>
-                  <div className="mt-4 p-3 bg-primary/10 rounded-lg">
-                    <div className="flex items-center text-sm">
-                      <Clock className="h-4 w-4 mr-2 text-primary" />
-                      <span>
-                        We typically respond to logistics inquiries within 2-4 hours
-                        during business hours. For urgent shipments, please call directly.
-                      </span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+            
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold text-balance mb-6">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto leading-relaxed">
-              Quick answers to common questions about our process and services.
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <Accordion type="single" collapsible className="w-full space-y-4">
-              <AccordionItem
-                value="item-1"
-                className="glass border-border/50 rounded-lg px-6"
-              >
-                <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-                  How long does a typical project take?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed">
-                  Project timelines vary based on complexity, but most web
-                  development projects take 4-12 weeks from start to finish. We
-                  provide detailed project timelines during our initial
-                  consultation and keep you updated throughout the development
-                  process.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem
-                value="item-2"
-                className="glass border-border/50 rounded-lg px-6"
-              >
-                <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-                  Do you work with international clients?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed">
-                  Yes! We work with clients worldwide and have experience
-                  managing projects across different time zones. We use modern
-                  collaboration tools and flexible communication schedules to
-                  ensure smooth project delivery regardless of location.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem
-                value="item-3"
-                className="glass border-border/50 rounded-lg px-6"
-              >
-                <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-                  What's included in your maintenance packages?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed">
-                  Our maintenance includes security updates, performance
-                  monitoring, backup management, and technical support. We also
-                  provide content updates, bug fixes, and feature enhancements
-                  as part of our comprehensive maintenance plans.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem
-                value="item-4"
-                className="glass border-border/50 rounded-lg px-6"
-              >
-                <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-                  Can you help with existing projects?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed">
-                  Absolutely! We can audit, optimize, or add new features to
-                  existing applications and websites. Our team specializes in
-                  code reviews, performance optimization, and modernizing legacy
-                  systems while maintaining functionality.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem
-                value="item-5"
-                className="glass border-border/50 rounded-lg px-6"
-              >
-                <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-                  What technologies do you specialize in?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed">
-                  We specialize in modern web technologies including React,
-                  Next.js, TypeScript, Node.js, and various databases. We also
-                  work with mobile development frameworks and cloud platforms
-                  like AWS and Vercel for scalable solutions.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem
-                value="item-6"
-                className="glass border-border/50 rounded-lg px-6"
-              >
-                <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-                  How do you handle project communication?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed">
-                  We maintain transparent communication through regular updates,
-                  scheduled check-ins, and dedicated project management tools.
-                  You'll have direct access to your development team and receive
-                  weekly progress reports throughout the project lifecycle.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </motion.div>
-        </div>
-      </section>
+      
     </div>
   );
 }

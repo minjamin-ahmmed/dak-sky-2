@@ -98,7 +98,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen -mt-18">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
+      <section className="relative py-10 lg:py-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(37,117,252,0.1),transparent_50%)]" />
 
@@ -111,7 +111,7 @@ export default function AboutPage() {
             >
               <Badge
                 variant="secondary"
-                className="mb-6 px-4 py-2 text-sm font-medium"
+                className="mt-8 mb-4 px-4 py-2 text-sm font-medium"
               >
                 About Dak-sky
               </Badge>
@@ -145,7 +145,7 @@ export default function AboutPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-[#13253F]">
+      <section className="py-8 bg-[#13253F]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="grid grid-cols-2 lg:grid-cols-4 gap-8"
@@ -198,7 +198,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story Section */}
-      <section className="py-20">
+      <section className="py-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -253,7 +253,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-gradient-to-b from-[#131B45] via-[#1F2C62] to-[#F5F8FF]">
+      <section className="py-10 bg-gradient-to-b from-[#131B45] via-[#1F2C62] to-[#F5F8FF]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -302,7 +302,7 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-20">
+      <section className="py-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -368,7 +368,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary/5">
+      <section className="py-10 bg-primary/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center max-w-3xl mx-auto"

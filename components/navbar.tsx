@@ -16,7 +16,8 @@ const navigation = [
   { name: "Services", href: "/services" },
   // { name: "Case Studies", href: "/projects" },
   { name: "Team", href: "/team" },
-  { name: "Blog", href: "/blog" },
+  // { name: "Blog", href: "/blog" },
+  { name: "FAQ", href: "/faq" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -48,7 +49,11 @@ export function Navbar() {
   return (
     <motion.nav
       className={cn(
-        "sticky top-4 z-50 w-10/12 mx-auto border-b border-border/40 glass glass-dark backdrop-blur bg-[#13253F]/90 overflow-hidden transition-all duration-300",
+        "sticky top-4 z-50 w-11/12 md:w-9/12 mx-auto border-b border-border/40 overflow-hidden transition-all duration-300",
+  
+        isHome && isHeroSection
+          ? "glass glass-dark backdrop-blur bg-gradient-to-r from-[#0B1220]/10 via-[#13253F]/20 to-[#1B2C5D]/10 shadow-xl"
+          : "bg-gradient-to-r from-white via-slate-50 to-sky-50 backdrop-blur-sm shadow-md",
         isOpen 
           ? "md:rounded-full rounded-2xl" 
           : "rounded-full"
@@ -108,7 +113,7 @@ export function Navbar() {
             </div>
           </div>
 
-          {/* Theme Toggle & Mobile Menu Button */}
+          {/* Mobile Menu Button */}
           <div className="flex items-center space-x-2">
           
             <div className="md:hidden">

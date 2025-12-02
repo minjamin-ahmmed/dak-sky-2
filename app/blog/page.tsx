@@ -210,7 +210,7 @@ export default function BlogPage() {
     return (
       <div className="min-h-screen">
         {/* Blog Post Header */}
-        <section className="relative py-20 overflow-hidden">
+        <section className="relative py-10 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20" />
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-4xl mx-auto">
@@ -266,7 +266,7 @@ export default function BlogPage() {
         </section>
 
         {/* Blog Post Content */}
-        <section className="py-12">
+        <section className="py-6">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <div className="prose prose-lg max-w-none">
@@ -333,7 +333,7 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen -mt-18">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
+      <section className="relative py-10 lg:py-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(37,117,252,0.1),transparent_50%)]" />
 
@@ -346,7 +346,7 @@ export default function BlogPage() {
             >
               <Badge
                 variant="secondary"
-                className="mb-6 px-4 py-2 text-sm font-medium"
+                className="mt-8 mb-4 px-4 py-2 text-sm font-medium"
               >
                 DAK-SKY LOGISTICS BLOG
               </Badge>
@@ -378,7 +378,7 @@ export default function BlogPage() {
       </section>
 
       {/* Search and Filter */}
-      <section className="py-12 bg-muted/30">
+      <section className="py-6 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -412,9 +412,9 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Featured Posts */}
+        {/* Featured Posts */}
       {selectedCategory === "All" && searchQuery === "" && (
-        <section className="py-20">
+        <section className="py-10">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               className="text-center mb-16"
@@ -498,7 +498,7 @@ export default function BlogPage() {
       )}
 
       {/* All Posts */}
-      <section className="py-20">
+      <section className="py-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -595,7 +595,7 @@ export default function BlogPage() {
           </div>
 
           {filteredPosts.length === 0 && (
-            <div className="text-center py-12">
+            <div className="text-center py-6">
               <p className="text-muted-foreground text-lg">
                 No articles found matching your criteria.
               </p>
@@ -615,7 +615,7 @@ export default function BlogPage() {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="py-20 bg-primary/5">
+      <section className="py-10 bg-primary/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center max-w-3xl mx-auto"
