@@ -98,11 +98,11 @@ const offices = [
     country: "Bangladesh",
   },
   {
-    city: "Guangzhou, China",
-    address: "Tianhe District, Business Center",
-    zipcode: "Guangzhou, Guangdong",
-    phone: "+86 20 1234 5678",
-    email: "guangzhou@dak-sky.com",
+    city: "Yiwu, China",
+    address: "义乌福田街道陶界岭小区2幢1号",
+    zipcode: "Yiwu, Zhejiang",
+    phone: "15805898097 (HOSSEN)",
+    email: "yiwu@dak-sky.com",
     country: "China",
   },
 ];

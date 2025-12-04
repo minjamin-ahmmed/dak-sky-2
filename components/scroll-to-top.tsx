@@ -41,9 +41,9 @@ export function ScrollToTop() {
           <Button
             onClick={scrollToTop}
             size="icon"
-            className="rounded-full shadow-lg glass border-border/50 hover:border-primary/50 transition-all duration-300 cursor-pointer"
+            className="rounded-full shadow-lg border-border/50 hover:border-primary/50 bg-[#4777f9] text-white transition-all duration-300 cursor-pointer"
           >
-            <ArrowUp className="h-4 w-4 text-primary" />
+            <ArrowUp className="h-4 w-4 text-white" />
           </Button>
         </motion.div>
       )}

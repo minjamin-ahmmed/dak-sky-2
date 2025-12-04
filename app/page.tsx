@@ -132,16 +132,16 @@ export default function HomePage() {
         </div>
 
         {/* Dark Overlay for Readability */}
-        <div className="absolute inset-0 bg-[#13253F]/40" />
+        <div className="absolute inset-0 bg-[#13253F]/20 pointer-events-none" />
 
         {/* Subtle Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#13253F]/10 via-transparent to-[#13253F]/10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#13253F]/10 via-transparent to-[#13253F]/10 pointer-events-none" />
 
         {/* Accent Gradient Overlay */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(37,117,252,0.1),transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(37,117,252,0.1),transparent_70%)] pointer-events-none" />
 
         {/* Animated particles */}
-        <div className="absolute inset-0 z-10">
+        <div className="absolute inset-0 z-10 pointer-events-none">
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={i}
@@ -298,26 +298,26 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-10 select-text">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 select-text">
+      <section className="py-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            className="text-center mb-16 select-text"
+            className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-balance mb-6 select-text">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-balance mb-6">
               Our Services
             </h2>
-            <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto leading-relaxed select-text">
+            <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto leading-relaxed">
               Comprehensive logistics and freight forwarding services to
               streamline your international shipping operations and expand your
               global reach.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 select-text">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -325,26 +325,26 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="select-text"
+                className=""
               >
-                <Card className="h-full bg-white/80 backdrop-blur-sm border-border/30 hover:border-primary/50 hover:shadow-lg transition-all duration-300 group select-text">
-                  <CardContent className="p-4 select-text">
+                <Card className="h-full bg-white/80 backdrop-blur-sm border-border/30 hover:border-primary/50 hover:shadow-lg transition-all duration-300 group">
+                  <CardContent className="p-4">
                     <div className="flex items-center mb-6">
                       <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                         <service.icon className="h-6 w-6" />
                       </div>
-                      <h3 className="text-xl font-semibold ml-4 select-text">
+                      <h3 className="text-xl font-semibold ml-4">
                         {service.title}
                       </h3>
                     </div>
-                    <p className="text-muted-foreground mb-6 leading-relaxed select-text">
+                    <p className="text-muted-foreground mb-6 leading-relaxed">
                       {service.description}
                     </p>
                     <ul className="space-y-2">
                       {service.features.map((feature, featureIndex) => (
                         <li
                           key={featureIndex}
-                          className="flex items-center text-sm select-text"
+                          className="flex items-center text-sm"
                         >
                           <CheckCircle className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
                           {feature}

@@ -17,7 +17,7 @@ export function DakSkyLoader() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/95 backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/95 backdrop-blur-sm pointer-events-none">
       {/* Elegant centered loader container */}
       <div className="relative">
         {/* Subtle background circle */}

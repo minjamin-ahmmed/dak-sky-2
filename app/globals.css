@@ -184,7 +184,6 @@
   outline: 2px solid hsl(var(--ring));
   outline-offset: 2px;
 }
-
 /* Ensure ALL text on the website is selectable - override any select-none classes */
 body,
 body * {
