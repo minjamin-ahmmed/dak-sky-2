@@ -76,33 +76,34 @@ const contactMethods = [
     icon: Phone,
     title: "Call Us",
     description: "Speak directly with our logistics team",
-    contact: "+880 123 456 7890",
-    action: "tel:+8801234567890",
+    contact: "+880 178 191 2222",
+    action: "tel:+8801781912222",
+   
   },
   {
     icon: MessageSquare,
     title: "WhatsApp",
-    description: "Message us for quick quotes and shipment inquiries",
-    contact: "+880 123 456 7890",
-    action: "https://wa.me/8801234567890",
+    description: "Message us for quick quotes and shipment",
+    contact: "+880 178 191 2222",
+    action: "https://wa.me/+8801781912222",
   },
 ];
 
 const offices = [
   {
     city: "Dhaka, Bangladesh",
-    address: "Gulshan 2, Road 45",
-    zipcode: "Dhaka 1212",
-    phone: "+880 123 456 7890",
-    email: "dhaka@dak-sky.com",
+    address: "Bismillah Tower, Unit-3, Floor-5, Shop- 4, Chawkbazar",
+    zipcode: "Dhaka, Bangladesh",
+    phone: "+880 178 191 2222",
+    email: "info@dak-sky.com",
     country: "Bangladesh",
   },
   {
     city: "Yiwu, China",
-    address: "义乌福田街道陶界岭小区2幢1号",
+    address: "Building-1, Block -2, Tao Jie Ling Community, Futian Street",
     zipcode: "Yiwu, Zhejiang",
     phone: "15805898097 (HOSSEN)",
-    email: "yiwu@dak-sky.com",
+    email: "info@dak-sky.com",
     country: "China",
   },
 ];

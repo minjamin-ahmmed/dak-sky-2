@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Github, Twitter, Linkedin, Mail } from "lucide-react";
+import { Github, Twitter, Linkedin, Mail, Facebook } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function Footer() {
@@ -110,10 +110,10 @@ export function Footer() {
             <h4 className="text-sm font-semibold text-foreground">Connect</h4>
             <div className="flex space-x-4">
               {[
-                { icon: Github, href: "#", label: "GitHub" },
-                { icon: Twitter, href: "#", label: "Twitter" },
-                { icon: Linkedin, href: "#", label: "LinkedIn" },
-                { icon: Mail, href: "#", label: "Email" },
+            
+                { icon: Facebook, href: "https://www.facebook.com/daksky.limited?mibextid=wwXIfr&rdid=DhzLgqmaeASt6qCr&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16hSTAaMfR%2F%3Fmibextid%3DwwXIfr#", label: "Facebook" },
+              
+                { icon: Mail, href: "mailto:info@dak-sky.com", label: "Email" },
               ].map(({ icon: Icon, href, label }, index) => (
                 <motion.div
                   key={label}

@@ -28,6 +28,14 @@ export function Navbar() {
   const isHome = pathname === "/";
   const [isHeroSection, setIsHeroSection] = React.useState(true);
 
+  // Helper function to check if a route is active
+  const isActive = (href: string) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+    return pathname.startsWith(href);
+  };
+
   React.useEffect(() => {
     if (!isHome) {
       setIsHeroSection(false);
@@ -92,20 +100,27 @@ export function Navbar() {
                   <Link
                     href={item.href}
                     className={cn(
-                      "px-3 py-2 rounded-t-md font-medium transition-all duration-200 relative",
-                      isHome && isHeroSection
-                        ? "text-white hover:text-white/80"
-                        : pathname === item.href
-                          ? "text-primary bg-primary/10 hover:text-primary"
+                      "px-3 py-2 rounded-md font-medium transition-all duration-200 relative",
+                      isActive(item.href)
+                        ? isHome && isHeroSection
+                          ? "text-white bg-white/10 hover:text-white"
+                          : "text-primary bg-primary/10 hover:text-primary font-semibold"
+                        : isHome && isHeroSection
+                          ? "text-white/80 hover:text-white hover:bg-white/5"
                           : "text-muted-foreground hover:text-primary hover:bg-accent/10"
                     )}
                   >
                     {item.name}
-                    {pathname === item.href && (
+                    {isActive(item.href) && (
                       <motion.div
-                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-lg"
+                        className={cn(
+                          "absolute bottom-0 left-0 right-0 h-1 rounded-full",
+                          isHome && isHeroSection
+                            ? "bg-white"
+                            : "bg-primary"
+                        )}
                         layoutId="navbar-indicator"
-                        transition={{ duration: 0.3 }}
+                        transition={{ duration: 0.3, type: "spring", stiffness: 500, damping: 30 }}
                       />
                     )}
                   </Link>
@@ -173,16 +188,30 @@ export function Navbar() {
                     <Link
                       href={item.href}
                       className={cn(
-                        "block px-3 py-2 rounded-md text-base font-medium transition-all duration-200",
-                        isHome && isHeroSection
-                          ? "text-white hover:text-white/80"
-                          : pathname === item.href
-                            ? "text-primary bg-primary/10"
+                        "block px-3 py-2 rounded-md text-base font-medium transition-all duration-200 relative",
+                        isActive(item.href)
+                          ? isHome && isHeroSection
+                            ? "text-white bg-white/10"
+                            : "text-primary bg-primary/10 font-semibold"
+                          : isHome && isHeroSection
+                            ? "text-white/80 hover:text-white hover:bg-white/5"
                             : "text-muted-foreground hover:text-primary hover:bg-accent/10"
                       )}
                       onClick={() => setIsOpen(false)}
                     >
                       {item.name}
+                      {isActive(item.href) && (
+                        <motion.div
+                          className={cn(
+                            "absolute left-0 top-0 bottom-0 w-1 rounded-r-full",
+                            isHome && isHeroSection
+                              ? "bg-white"
+                              : "bg-primary"
+                          )}
+                          layoutId="mobile-navbar-indicator"
+                          transition={{ duration: 0.3 }}
+                        />
+                      )}
                     </Link>
                   </motion.div>
                 ))}
