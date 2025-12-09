@@ -302,7 +302,7 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-10">
+      {/* <section className="py-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -322,7 +322,7 @@ export default function AboutPage() {
 
           <div className="max-w-4xl mx-auto">
             <div className="relative">
-              {/* Timeline line */}
+         
               <div className="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-border"></div>
 
               {timeline.map((item, index) => (
@@ -334,10 +334,10 @@ export default function AboutPage() {
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  {/* Timeline dot */}
+                  
                   <div className="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 w-3 h-3 bg-primary rounded-full border-4 border-background"></div>
 
-                  {/* Content */}
+               
                   <div
                     className={`ml-12 md:ml-0 md:w-1/2 ${
                       index % 2 === 0 ? "md:pr-12" : "md:pl-12 md:ml-auto"
@@ -365,7 +365,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-10 bg-primary/5">

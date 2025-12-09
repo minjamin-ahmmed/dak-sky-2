@@ -17,6 +17,7 @@ const navigation = [
   // { name: "Case Studies", href: "/projects" },
   { name: "Team", href: "/team" },
   { name: "Shipping Zone", href:"/shipping-zone"},
+  { name: "Sourcing", href:"/sourcing"},
   // { name: "Blog", href: "/blog" },
   { name: "FAQ", href: "/faq" },
   { name: "Contact", href: "/contact" },
