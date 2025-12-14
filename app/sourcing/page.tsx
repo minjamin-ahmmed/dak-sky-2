@@ -3,6 +3,13 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import image1 from "../../public/art-1.jpg"
+import image2 from "../../public/art-2.jpg"
+import image3 from "../../public/art-3.jpg"
+import image4 from "../../public/art-4.jpg"
+import image5 from "../../public/art-5.jpg"
+import image6 from "../../public/art-6.jpg"
+import image7 from "../../public/art-7.jpg"
 import {
   ArrowRight,
   Package,
@@ -22,112 +29,88 @@ import Image from "next/image";
 const products = [
   {
     id: 1,
-    name: "Electronics Components",
+    name: "Canvas Paintings",
     description:
-      "High-quality electronic components and circuit boards for manufacturing. Sourced from verified suppliers in China.",
-    image: "/placeholder.svg",
+      "Premium hand-painted and printed canvas artworks in various styles including abstract, landscape, and contemporary designs. Available in multiple sizes and custom framing options.",
+    image: image1,
     origin: "China",
-    price: "$0.50 - $5.00",
-    priceUnit: "per unit",
+    price: "$15.00 - $150.00",
+    priceUnit: "per piece",
     rating: 4.8,
     reviews: 1247,
   },
   {
     id: 2,
-    name: "Textile Products",
+    name: "Sculptures & Statues",
     description:
-      "Premium fabrics and textile materials including cotton, polyester, and blended fabrics for various applications.",
-    image: "/placeholder.svg",
+      "Handcrafted sculptures and statues made from various materials including resin, metal, and stone. Perfect for home decor, gardens, and commercial spaces.",
+    image: image2,
     origin: "China",
-    price: "$2.50 - $15.00",
-    priceUnit: "per meter",
+    price: "$25.00 - $500.00",
+    priceUnit: "per piece",
     rating: 4.6,
     reviews: 892,
   },
   {
     id: 3,
-    name: "Home Decor Items",
+    name: "Digital Art Prints",
     description:
-      "Stylish home decor products including vases, lamps, wall art, and decorative accessories for modern interiors like in a home..",
-    image: "/placeholder.svg",
+      "High-quality digital art prints on premium paper and canvas. Wide selection of modern, abstract, and contemporary art designs suitable for framing and display.",
+    image: image3,
     origin: "China",
     price: "$5.00 - $50.00",
-    priceUnit: "per piece",
+    priceUnit: "per print",
     rating: 4.7,
     reviews: 2156,
   },
   {
     id: 4,
-    name: "Plastic Products",
+    name: "Handmade Pottery & Ceramics",
     description:
-      "Custom plastic products and components manufactured to your specifications. Wide range of materials and finishes.",
-    image: "/placeholder.svg",
+      "Artisan-crafted pottery and ceramic pieces including vases, bowls, decorative items, and custom ceramic artworks. Traditional and modern designs available.",
+    image: image4,
     origin: "China",
-    price: "$0.20 - $10.00",
-    priceUnit: "per unit",
+    price: "$10.00 - $200.00",
+    priceUnit: "per piece",
     rating: 4.5,
     reviews: 634,
   },
   {
     id: 5,
-    name: "Hardware & Tools",
+    name: "Traditional Chinese Art",
     description:
-      "Industrial hardware, tools, and equipment sourced from reliable manufacturers. Quality guaranteed products.",
-    image: "/placeholder.svg",
+      "Authentic traditional Chinese artwork including calligraphy, ink paintings, silk paintings, and traditional scroll art. Sourced from skilled artisans and studios.",
+    image: image5,
     origin: "China",
-    price: "$3.00 - $25.00",
-    priceUnit: "per unit",
+    price: "$30.00 - $800.00",
+    priceUnit: "per piece",
     rating: 4.9,
     reviews: 1843,
   },
   {
     id: 6,
-    name: "Packaging Materials",
+    name: "Art Supplies & Materials",
     description:
-      "Custom packaging solutions including boxes, bags, and protective materials tailored to your product needs.",
-    image: "/placeholder.svg",
+      "Professional-grade art supplies including brushes, paints, canvases, easels, and art tools. Bulk sourcing available for art stores and studios.",
+    image: image6,
     origin: "China",
-    price: "$0.10 - $2.00",
+    price: "$2.00 - $100.00",
     priceUnit: "per unit",
     rating: 4.4,
     reviews: 567,
   },
   {
     id: 7,
-    name: "Fashion Accessories",
+    name: "Framed Artwork Collection",
     description:
-      "Trendy fashion accessories including bags, jewelry, watches, and seasonal fashion items from top suppliers.",
-    image: "/placeholder.svg",
+      "Curated collection of ready-to-hang framed artworks including modern prints, vintage reproductions, and contemporary pieces. Various frame styles and sizes available.",
+    image: image7,
     origin: "China",
-    price: "$8.00 - $80.00",
-    priceUnit: "per piece",
+    price: "$20.00 - $300.00",
+    priceUnit: "per framed piece",
     rating: 4.6,
     reviews: 1234,
   },
-  {
-    id: 8,
-    name: "Kitchenware",
-    description:
-      "Quality kitchenware and cookware products including utensils, dinnerware, and kitchen accessories.",
-    image: "/placeholder.svg",
-    origin: "China",
-    price: "$4.00 - $40.00",
-    priceUnit: "per set",
-    rating: 4.7,
-    reviews: 987,
-  },
-//   {
-//     id: 9,
-//     name: "Sports Equipment",
-//     description:
-//       "Sports and fitness equipment including gym gear, outdoor sports items, and athletic accessories.",
-//     image: "/placeholder.svg",
-//     origin: "China",
-//     price: "$15.00 - $150.00",
-//     priceUnit: "per unit",
-//     rating: 4.5,
-//     reviews: 456,
-//   },
 ];
 
 const benefits = [
