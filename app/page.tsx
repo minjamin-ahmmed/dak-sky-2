@@ -442,7 +442,7 @@ export default function HomePage() {
       </section>
 
       {/* Client Logos Section */}
-      <section className="py-8">
+      {/* <section className="py-8">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-12"
@@ -460,9 +460,9 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          {/* Marquee Slider */}
+         
           <div className="relative overflow-hidden w-full py-4">
-            {/* Gradient fade masks */}
+        
             <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
             <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
@@ -474,7 +474,7 @@ export default function HomePage() {
               className="relative"
             >
               <div className="flex animate-marquee gap-8 will-change-transform">
-                {/* First set of logos */}
+           
                 {partners.map((client, index) => (
                   <div
                     key={`first-${index}`}
@@ -489,7 +489,7 @@ export default function HomePage() {
                     />
                   </div>
                 ))}
-                {/* Duplicate set for seamless loop */}
+            
                 {partners.map((client, index) => (
                   <div
                     key={`second-${index}`}
@@ -508,7 +508,7 @@ export default function HomePage() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-10 bg-primary/5">
