@@ -26,24 +26,28 @@ import {
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const bangladeshRestricted = [
+const bangladeshExported = [
+    "Electronics & Technology (E&T)",
+      "Footwear (F&W)",
+        "Leather Goods (L&G)",
+          "Pharmaceuticals",
+          "Textiles (non-jute) (T&N)",
+  "Home Decor Items (H&D)",
+
+  "Ready-Made Garments (RMG)",
+  
+];
+
+const bangladeshImported = [
   "Jute Yarn",
   "Jute Fabric",
   "Jute Handicraft",
   "Clothing Items",
-];
-
-const bangladeshAllowed = [
-  "Electronics & Technology",
-  "Pharmaceuticals",
-  "Leather Goods",
   "Ceramics & Pottery",
-  "Frozen Foods (with proper documentation)",
-  "Textiles (non-jute)",
-  "Plastic Products",
-  "Footwear",
-  "Home Decor Items",
+  "Frozen Fish & Seafood",
   "Agricultural Products",
+  "Ceramics & Pottery",
+  "Plastic Products",
 ];
 
 const chinaServices = [
@@ -239,38 +243,38 @@ export default function ShippingZonePage() {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Restricted Items */}
+            {/* Exported Items */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <Card className="h-full glass border-border/50 hover:border-destructive/50 transition-all duration-300">
+              <Card className="h-full glass border-border/50 hover:border-primary/50 transition-all duration-300">
                 <CardContent className="p-8">
                   <div className="flex items-center mb-6">
-                    <div className="p-3 rounded-lg bg-destructive/10 text-destructive">
-                      <XCircle className="h-6 w-6" />
+                    <div className="p-3 rounded-lg bg-primary/10 text-primary">
+                      <Package className="h-6 w-6" />
                     </div>
                     <h3 className="text-xl font-semibold ml-4">
-                      Restricted Product Categories
+                      Allow Import Categories
                     </h3>
                   </div>
                   <ul className="space-y-3">
-                    {bangladeshRestricted.map((item, index) => (
+                    {bangladeshExported.map((item, index) => (
                       <li
                         key={index}
                         className="flex items-center text-muted-foreground"
                       >
-                        <XCircle className="h-4 w-4 text-destructive mr-3 flex-shrink-0" />
+                        <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
                         {item}
                       </li>
                     ))}
                   </ul>
                   <p className="mt-6 text-sm text-muted-foreground leading-relaxed">
-                    These items require special permits or are restricted by
-                    government regulations. Please contact us for specific
-                    requirements.
+                    These are the major export categories from Bangladesh. We
+                    provide comprehensive shipping services for all these
+                    products to global destinations.
                   </p>
                 </CardContent>
               </Card>
@@ -294,7 +298,7 @@ export default function ShippingZonePage() {
                     </h3>
                   </div>
                   <ul className="space-y-3">
-                    {bangladeshAllowed.map((item, index) => (
+                    {bangladeshImported.map((item, index) => (
                       <li
                         key={index}
                         className="flex items-center text-muted-foreground"
