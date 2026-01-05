@@ -7,7 +7,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../public/logo.png"
+import logo from "../public/dak-sky-logo.svg"
 import Image from "next/image";
 
 const navigation = [

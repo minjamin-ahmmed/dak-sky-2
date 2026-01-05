@@ -25,6 +25,16 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
+import europeFlag from "../../public/europe.png"
+import usaFlag from "../../public/usa.jpg"
+import saudiArabiaFlag from "../../public/saudi-arab.png"
+import uaeFlag from "../../public/uae.jpg"
+import qatarFlag from "../../public/qatar.jpg"
+import kuwaitFlag from "../../public/kuwait.jpg"
+import brazilFlag from "../../public/brazil.png"
+import argentinaFlag from "../../public/argentina.png"
+import mexicoFlag from "../../public/mexico.png"
 
 const bangladeshExported = [
     "Electronics & Technology (E&T)",
@@ -63,7 +73,22 @@ const chinaDestinations = [
   "UAE (Dubai)",
   "Qatar",
   "Kuwait",
+  "Brazil",
+  "Argentina",
+  "Mexico"
 ];
+
+const destinationFlags: Record<string, any> = {
+  "Europe": europeFlag,
+  "USA": usaFlag,
+  "Saudi Arabia": saudiArabiaFlag,
+  "UAE (Dubai)": uaeFlag,
+  "Qatar": qatarFlag,
+  "Kuwait": kuwaitFlag,
+  "Brazil": brazilFlag,
+  "Argentina": argentinaFlag,
+  "Mexico": mexicoFlag,
+};
 
 const chinaServiceTypes = [
   "Air Freight",
@@ -391,7 +416,16 @@ export default function ShippingZonePage() {
                       className="flex items-center text-white/80 text-sm"
                     >
                       <CheckCircle className="h-4 w-4 text-white mr-3 flex-shrink-0" />
+                    
                       {destination}
+
+                        <Image
+                        src={destinationFlags[destination]}
+                        alt={`${destination} flag`}
+                        width={24}
+                        height={16}
+                        className="ml-2 flex-shrink-0 rounded object-cover"
+                      />
                     </li>
                   ))}
                 </ul>
