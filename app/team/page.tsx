@@ -23,197 +23,76 @@ import Image from "next/image";
 const teamMembers = [
   {
     id: 1,
-    name: "Ahmed Rahman",
-    role: "Managing Director & CEO",
+    name: "Hossain Md Rakib",
+    role: "Chairman",
     department: "Leadership",
-    bio: "Visionary leader with 15+ years in international logistics and freight forwarding. Expert in China-Bangladesh trade routes and European export markets. Founded Dak-sky to bridge global supply chains.",
+    bio: "Visionary leader and Chairman with extensive experience in international logistics and freight forwarding. Provides strategic direction and oversees the company's long-term growth and development in global markets.",
     image: "/user.png",
     skills: [
       "Strategic Planning",
-      "International Trade",
-      "Team Leadership",
-      "Supply Chain Management",
+      "Business Leadership",
+      "Corporate Governance",
+      "Industry Expertise",
     ],
     location: "Dhaka, Bangladesh",
     social: {
       linkedin: "#",
-      twitter: "#",
-      email: "ahmed@dak-sky.com",
+      email: "rakib@dak-sky.com",
     },
     achievements: [
-      "Logistics Industry Leader",
-      "China-Bangladesh Trade Expert",
-      "15+ Years Experience",
+      "Industry Leader",
+      "Strategic Vision",
+      "Business Excellence",
     ],
   },
   {
     id: 2,
-    name: "Li Wei",
-    role: "Operations Manager - China",
-    department: "Operations",
-    bio: "Operations specialist with deep expertise in Chinese export logistics. Manages our Guangzhou operations center, ensuring seamless cargo handling and documentation for shipments to Bangladesh and Europe.",
- image: "/user.png",
+    name: "Sazzad Hossain",
+    role: "CEO",
+    department: "Leadership",
+    bio: "Chief Executive Officer with proven expertise in logistics operations and business management. Leads the company's day-to-day operations and drives innovation in freight forwarding services.",
+    image: "/user.png",
     skills: [
-      "Cargo Operations",
-      "Documentation",
-      "Port Management",
-      "Quality Control",
+      "Executive Management",
+      "Operations Leadership",
+      "Business Strategy",
+      "Team Development",
     ],
-    location: "Guangzhou, China",
+    location: "Dhaka, Bangladesh",
     social: {
       linkedin: "#",
-      email: "liwei@dak-sky.com",
+      email: "sazzad@dak-sky.com",
     },
     achievements: [
-      "Port Operations Certified",
-      "10+ Years China Operations",
-      "Zero Delay Record",
+      "Operations Excellence",
+      "Business Growth",
+      "Leadership Excellence",
     ],
   },
   {
     id: 3,
-    name: "Fatima Khan",
-    role: "Customs & Compliance Specialist",
-    department: "Customs",
-    bio: "Expert in customs clearance and regulatory compliance across Bangladesh, China, and Europe. Ensures all shipments meet international trade regulations and minimizes clearance delays.",
-   image: "/user.png",
-    skills: [
-      "Customs Clearance",
-      "Trade Compliance",
-      "Documentation",
-      "Regulatory Affairs",
-    ],
-    location: "Dhaka, Bangladesh",
-    social: {
-      linkedin: "#",
-      email: "fatima@dak-sky.com",
-    },
-    achievements: [
-      "Customs Broker Licensed",
-      "Compliance Expert",
-      "Fast-Track Clearance",
-    ],
-  },
-  {
-    id: 4,
-    name: "Hassan Ali",
-    role: "Freight Coordinator",
+    name: "Ahsan Habib",
+    role: "Manager",
     department: "Operations",
-    bio: "Coordinates air and sea freight operations, managing complex logistics routes from origin to destination. Expert in route optimization and carrier relationships.",
- image: "/user.png",
+    bio: "Experienced manager overseeing critical operations and ensuring smooth execution of logistics services. Manages team coordination and maintains high standards of service delivery.",
+    image: "/user.png",
     skills: [
-      "Freight Coordination",
-      "Route Planning",
-      "Carrier Management",
-      "Tracking & Monitoring",
+      "Operations Management",
+      "Team Coordination",
+      "Process Optimization",
+      "Quality Assurance",
     ],
     location: "Dhaka, Bangladesh",
     social: {
       linkedin: "#",
-      email: "hassan@dak-sky.com",
+      email: "ahsan@dak-sky.com",
     },
     achievements: [
-      "On-Time Delivery 98%",
-      "Route Optimization Expert",
-      "8+ Years Experience",
+      "Operational Excellence",
+      "Team Management",
+      "Process Improvement",
     ],
   },
-//   {
-//     id: 5,
-//     name: "Mei Lin",
-//     role: "Sales Manager - Asia Pacific",
-//     department: "Sales",
-//     bio: "Drives business growth in the Asia-Pacific region, specializing in China-Bangladesh trade routes. Builds strong client relationships and develops customized logistics solutions.",
-//  image: "/user.png",
-//     skills: [
-//       "Business Development",
-//       "Client Relations",
-//       "Logistics Solutions",
-//       "Market Analysis",
-//     ],
-//     location: "Guangzhou, China",
-//     social: {
-//       linkedin: "#",
-//       email: "meilin@dak-sky.com",
-//     },
-//     achievements: [
-//       "Top Sales Performer",
-//       "Client Retention 95%",
-//       "Regional Growth Leader",
-//     ],
-//   },
-//   {
-//     id: 6,
-//     name: "Karim Hossain",
-//     role: "Warehouse Manager",
-//     department: "Warehousing",
-//     bio: "Manages warehouse operations and inventory management in Bangladesh. Ensures secure storage, efficient distribution, and real-time inventory tracking for client shipments.",
-//  image: "/user.png",
-//     skills: [
-//       "Warehouse Management",
-//       "Inventory Control",
-//       "Distribution",
-//       "Quality Assurance",
-//     ],
-//     location: "Dhaka, Bangladesh",
-//     social: {
-//       linkedin: "#",
-//       email: "karim@dak-sky.com",
-//     },
-//     achievements: [
-//       "Warehouse Operations Expert",
-//       "Zero Loss Record",
-//       "Efficiency Optimization",
-//     ],
-//   },
-//   {
-//     id: 7,
-//     name: "Sophie van der Berg",
-//     role: "Customer Service Manager - Europe",
-//     department: "Customer Service",
-//     bio: "Leads customer service operations for European clients, ensuring exceptional support throughout the shipping process. Expert in handling international logistics inquiries and resolving issues promptly.",
-//  image: "/user.png",
-//     skills: [
-//       "Customer Relations",
-//       "Problem Solving",
-//       "Communication",
-//       "Client Support",
-//     ],
-//     location: "Rotterdam, Netherlands",
-//     social: {
-//       linkedin: "#",
-//       email: "sophie@dak-sky.com",
-//     },
-//     achievements: [
-//       "Customer Satisfaction 98%",
-//       "Support Excellence Award",
-//       "Multilingual Support",
-//     ],
-//   },
-//   {
-//     id: 8,
-//     name: "Rajesh Kumar",
-//     role: "Supply Chain Analyst",
-//     department: "Operations",
-//     bio: "Analyzes supply chain data to optimize logistics operations, reduce costs, and improve delivery times. Uses data-driven insights to enhance our freight forwarding services.",
-//   image: "/user.png",
-//     skills: [
-//       "Data Analysis",
-//       "Supply Chain Optimization",
-//       "Cost Management",
-//       "Performance Metrics",
-//     ],
-//     location: "Dhaka, Bangladesh",
-//     social: {
-//       linkedin: "#",
-//       email: "rajesh@dak-sky.com",
-//     },
-//     achievements: [
-//       "Cost Reduction 15%",
-//       "Analytics Expert",
-//       "Process Optimization",
-//     ],
-//   },
 ];
 
 const departments = ["All", "Leadership", "Operations", "Customs", "Sales", "Customer Service", "Warehousing"];
@@ -376,14 +255,14 @@ export default function TeamPage() {
                             </Link>
                           </Button>
                         )}
-                        {member.social.twitter && (
+                        {('twitter' in member.social) && (member.social as any).twitter && (
                           <Button
                             size="icon"
                             variant="secondary"
                             className="w-8 h-8"
                             asChild
                           >
-                            <Link href={member.social.twitter}>
+                            <Link href={(member.social as any).twitter}>
                               <Twitter className="h-4 w-4" />
                             </Link>
                           </Button>
