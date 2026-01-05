@@ -416,16 +416,18 @@ export default function ShippingZonePage() {
                       className="flex items-center text-white/80 text-sm"
                     >
                       <CheckCircle className="h-4 w-4 text-white mr-3 flex-shrink-0" />
-                    
-                      {destination}
 
                         <Image
                         src={destinationFlags[destination]}
                         alt={`${destination} flag`}
                         width={24}
                         height={16}
-                        className="ml-2 flex-shrink-0 rounded object-cover"
+                        className="mr-2 flex-shrink-0 rounded object-cover"
                       />
+                    
+                      {destination}
+
+                      
                     </li>
                   ))}
                 </ul>
