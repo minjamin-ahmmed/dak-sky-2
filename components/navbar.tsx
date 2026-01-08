@@ -18,6 +18,7 @@ const navigation = [
   { name: "Team", href: "/team" },
   { name: "Shipping Zone", href:"/shipping-zone"},
   { name: "Sourcing", href:"/sourcing"},
+  { name: "Products", href: "/product" },
   // { name: "Blog", href: "/blog" },
   { name: "FAQ", href: "/faq" },
   { name: "Contact", href: "/contact" },

@@ -21,10 +21,10 @@ export function Footer() {
             <div className="flex items-center ">
              <Link href="/">
               <Image
-                src="/logo.png"
+                src="/dak-sky-logo.svg"
                 alt="Dak-sky"
-                width={120}
-                height={40}
+                width={150}
+                height={150}
                 className="h-12 w-auto"
               /></Link>
             </div>
