@@ -422,7 +422,7 @@ function ProductCard({ product }: { product: Product }) {
         </div>
 
         {/* Content */}
-        <CardContent className="p-4 space-y-2">
+        <CardContent className="px-4 pb-4 space-y-2">
           {/* Location */}
           <div className="flex items-center gap-1 text-sm text-muted-foreground">
             <MapPin className="h-3 w-3" />
@@ -531,7 +531,7 @@ export default function ProductPage() {
       </section>
 
       {/* Product Section */}
-      <section className="py-10">
+      <section className="py-10 max-w-7xl mx-auto">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Title */}
           <motion.div
