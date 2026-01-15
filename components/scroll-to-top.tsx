@@ -18,7 +18,7 @@ export function ScrollToTop() {
         className="rounded-full shadow-lg border-border/50 hover:border-primary/50 bg-[#4777f9] text-white transition-all duration-300 cursor-pointer h-12 w-12"
       >
         <a
-          href="https://www.facebook.com/share/16hSTAaMfR/?mibextid=wwXIfr"
+          href="https://m.me/976714612185510"
           target="_blank"
           rel="noopener noreferrer"
         >
